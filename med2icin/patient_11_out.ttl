@@ -1,0 +1,17 @@
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/PatientenAdresse/Patient__1_12568> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_Strasse> "Hertrampfweg" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/PatientenAdresse/Patient__1_12568> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_Hausnummer> "19" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/PatientenAdresse/Patient__1_12568> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_PLZ> "12568" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/PatientenAdresse/Patient__1_12568> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_Ort> "Senftenberg" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/PatientenAdresse/Patient__1_12568> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/PatientenAdresse> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/PatientenAdresse/Patient__1_12568> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient_10791.0> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_Nachname> "Gude" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient_10791.0> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_Geburtsdatum> "24.03.1969" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient_10791.0> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasPatientAddress> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/PatientenAdresse/Patient__1> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient_10791.0> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/KrankenkassenNr> "108035612" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient_10791.0> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_Vornamen> "Vesna" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient_10791.0> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_Geschlecht> "W" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient_10791.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patient> .
+
+
