@@ -1,0 +1,116 @@
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <https://fraunhofer.de/med2icin/ADT-GEKID/> .
+@prefix lab: <https://fraunhofer.de/med2icin/ADT-GEKID/resources/> .
+@prefix onco: <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<#PatientMapping>
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/patient_11.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Laborwert/Laborwert";
+    ];
+ 
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/{Laborwert_Datum}";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasMengeLaborwert;
+    rr:objectMap 
+      [
+       rr:constant lab:Laborwert;
+      ];
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Laborwert_Typ;
+    rr:objectMap 
+      [
+       rml:reference "Laborwert_Typ";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Laborwert_Ergebnis;
+    rr:objectMap 
+      [
+       rml:reference "Laborwert_Ergebnis";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Laborwert_Einheit;
+    rr:objectMap 
+      [
+       rml:reference "Laborwert_Einheit";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Laborwert_Datum;
+    rr:objectMap 
+      [
+       rml:reference "Laborwert_Datum";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Laborwert_Unsicherheit_Absolut;
+    rr:objectMap 
+      [
+       rml:reference "Laborwert_Unsicherheit_Absolut";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Laborwert_Unsicherheit_Relativ;
+    rr:objectMap 
+      [
+       rml:reference "Laborwert_Unsicherheit_Relativ";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Laborwert_Unix_Timestamp;
+    rr:objectMap 
+      [
+       rml:reference "Laborwert_Unix_Timestamp";
+      ];
+   ].
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
