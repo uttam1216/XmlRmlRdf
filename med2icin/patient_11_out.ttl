@@ -1,17 +1,750 @@
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient_10791.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patient> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient_10791.0> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/KrankenkassenNr> "108035612" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient_10791.0> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_Nachname> "Gude" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient_10791.0> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_Vornamen> "Vesna" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient_10791.0> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_Geburtsdatum> "24.03.1969" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient_10791.0> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_Geschlecht> "W" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient_10791.0> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasPatientAddress> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/PatientenAdresse/Patient__1> .
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/PatientenAdresse/Patient__1_12568> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/PatientenAdresse/Patient__1_12568> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/PatientenAdresse> .
 <https://fraunhofer.de/med2icin/ADT-GEKID/resources/PatientenAdresse/Patient__1_12568> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_Strasse> "Hertrampfweg" .
 <https://fraunhofer.de/med2icin/ADT-GEKID/resources/PatientenAdresse/Patient__1_12568> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_Hausnummer> "19" .
 <https://fraunhofer.de/med2icin/ADT-GEKID/resources/PatientenAdresse/Patient__1_12568> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_PLZ> "12568" .
 <https://fraunhofer.de/med2icin/ADT-GEKID/resources/PatientenAdresse/Patient__1_12568> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_Ort> "Senftenberg" .
-<https://fraunhofer.de/med2icin/ADT-GEKID/resources/PatientenAdresse/Patient__1_12568> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/PatientenAdresse> .
-<https://fraunhofer.de/med2icin/ADT-GEKID/resources/PatientenAdresse/Patient__1_12568> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 
 
-<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient_10791.0> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_Nachname> "Gude" .
-<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient_10791.0> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_Geburtsdatum> "24.03.1969" .
-<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient_10791.0> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasPatientAddress> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/PatientenAdresse/Patient__1> .
-<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient_10791.0> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/KrankenkassenNr> "108035612" .
-<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient_10791.0> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_Vornamen> "Vesna" .
-<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient_10791.0> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_Geschlecht> "W" .
-<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient_10791.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patient> .
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/101250_PAT_11> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMelderMeldung> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/MelderMeldung> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/101250_PAT_11> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldeanlass> "statusmeldung" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/101250_PAT_11> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldebegruendung> "V" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/101250_PAT_11> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldedatum> "14.10.2020" .
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Seitenlokalisation> "T" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Diagnosedatum> "15.01.2009" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Primaertumor_ICD_Code> "C20" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMelderMeldugTumorzuordnung> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Tumorzuordnung> .
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Diagnosedatum> "15.01.2009" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Primaertumor_Diagnosetext> "Bösartige Neubildung des Rektums, G." .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Primaertumor_ICD_Code> "C20" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMelderMeldugDiagnose> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Diagnose> .
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/TNM_V> "V1" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/TNM_M> "M0" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMelderMeldugDiagnoseCtnm> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/cTNM> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/TNM_c_p_u_Praefix_T> "p" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/TNM_c_p_u_Praefix_M> "c" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/TNM_L> "L0" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/TNM_T> "T2" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/TNM_Datum> "09.11.2009" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/TNM_N> "N0" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/TNM_c_p_u_Praefix_N> "p" .
+
+
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Serum/Vollblut" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "nan" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Citrat" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "nan" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "mmol/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Natrium" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "138" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "mmol/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Kalium" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "4.6" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "U/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "CK" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "65" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "U/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "GPT" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "26" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "U/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "GOT" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "26" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "U/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Gamma-GT" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "42" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "U/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Alk. Phosphatase (AP)" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "68" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "U/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "LDH" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "232" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "U/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Lipase" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "34" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "mg/dl" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Bilirubin ges." .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "0.9" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "mg/dl" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Bilirubin dir." .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "0.2" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "mg/dl" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Bilirubin ind." .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "0.7" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "mg/dl" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Creatinin" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "0.7" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "mg/dl" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Harnsäure" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "4.2" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Elektrophorese" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "nan" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "g/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Eiweiß, gesamt" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "78.2" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "%" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Albumin/Elpho" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "68.8" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "%" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Alpha-1" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "2.2" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "%" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Alpha-2" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "4.4" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "%" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Beta-Globulin" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "10.0" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "%" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Gamma-Globulin" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "14.6" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "kA" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Kurve" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "nan" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "mg/dl" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Triglyceride" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "160" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "mg/dl" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Cholesterin" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "209" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "mg/dl" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Glucose" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "77" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "g/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Immunglobulin-G" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "10.4" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "g/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Immunglobulin-M" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "1.0" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "g/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Immunglobulin-A" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "0.54" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Blubild klein" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "nan" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "/nl" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Leukozyten" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "6.1" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "Mio/µl" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Erythrozyten" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "5.1" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "g/dl" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Haemoglobin" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "15.2" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "l/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Haematokrit" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "0.41" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "fL" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "MCV" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "79.6" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "pg" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "MCH" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "30" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "g/dl" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "MCHC" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "37" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "/nl" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Thrombozyten" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "230" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Differential-Blutb." .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "nan" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "%" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Neutrophile" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "77" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "%" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Lymphozyten" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "14" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "%" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Monozyten" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "5" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "%" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "EOS" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "3" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "%" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "BASO" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "1" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "kA" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "INR" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "1.00" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "%" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Quick" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "100" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "sec" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "PTT" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "25" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "µU/ml" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "TSH" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "1.15" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Serum/Vollblut" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "nan" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "mg/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "CRP (C-reaktives Protein)" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "4.3" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "µg/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Ferritin" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "75" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "ng/ml" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Folsäure" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "8.3" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "pg/ml" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Vitamin B 12 (Cyanocobalamin)" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "395" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "U/ml" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "CA 19-9 (Architect, Fa. Abbott)" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "<5" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "ng/ml" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "CEA" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "1.4" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "pg/ml" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "FT3 (Trijodthyronin, freies)" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "3.2" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "ng/dl" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "FT4 (Thyroxin, freies)" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "1.2" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "g/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Haptoglobin" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "0.97" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Immunfixation" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "Kein Anh.." .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/15.01.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "15.01.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "mmol/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Natrium" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "138" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "mmol/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Kalium" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "4.2" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "mmol/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Calcium" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "2.40" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "U/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "CK" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "60" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "U/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "GPT" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "22" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "U/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "GOT" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "19" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "U/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Gamma-GT" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "49" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "U/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Alk. Phosphatase (AP)" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "81" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "U/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "LDH" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "179" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "U/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Lipase" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "36" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "mg/dl" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Bilirubin ges." .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "0.6" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "mg/dl" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Bilirubin dir." .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "0.2" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "mg/dl" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Bilirubin ind." .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "0.5" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "mg/dl" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Creatinin" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "0.73" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "mg/dl" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Harnsäure" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "3.5" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "mg/dl" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Glucose" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "74" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Blubild klein" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "nan" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "/nl" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Leukozyten" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "7.0" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "Mio/µl" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Erythrozyten" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "5.3" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "g/dl" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Haemoglobin" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "15.2" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "l/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Haematokrit" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "0.45" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "fL" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "MCV" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "83.8" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "pg" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "MCH" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "29" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "g/dl" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "MCHC" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "34" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "/nl" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Thrombozyten" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "230" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Differential-Blutb." .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "nan" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "%" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Neutrophile" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "74" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "%" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Lymphozyten" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "20" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "%" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Monozyten" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "4" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "%" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "EOS" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "2" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "%" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "BASO" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "0" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "mg/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "CRP (C-reaktives Protein)" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "2.6" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "µg/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Ferritin" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "87" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "ng/ml" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Folsäure" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "6.2" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "pg/ml" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Vitamin B 12 (Cyanocobalamin)" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "460" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "µU/ml" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "TSH" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "1.41" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "U/ml" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "CA 19-9 (Architect, Fa. Abbott)" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "<5" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "ng/ml" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "CEA" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "2.1" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "pg/ml" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "FT3 (Trijodthyronin, freies)" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "3.3" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "ng/dl" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "FT4 (Thyroxin, freies)" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "1.3" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Einheit> "g/l" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Haptoglobin" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "1.03" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMengeLaborwert> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Typ> "Immunfixation" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Ergebnis> "Kein Anh.." .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/09.11.2009> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Laborwert_Datum> "09.11.2009" .
 
 
