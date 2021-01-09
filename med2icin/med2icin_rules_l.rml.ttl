@@ -7,7 +7,7 @@
 @prefix onco: <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
-<#PatientMapping>
+<#LaborwertMapping>
  rml:logicalSource 
     [ rml:source "/home/ukumar/Desktop/med2icin/patient_11.xml";
       rml:referenceFormulation ql:XPath;

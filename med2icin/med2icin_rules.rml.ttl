@@ -1,0 +1,170 @@
+@prefix rml: <http://semweb.mmlab.be/ns/rml#> .
+@prefix rr: <http://www.w3.org/ns/r2rml#> .
+@prefix ql: <http://semweb.mmlab.be/ns/ql#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <https://fraunhofer.de/med2icin/ADT-GEKID/> .
+@prefix ptad: <https://fraunhofer.de/med2icin/ADT-GEKID/resources/PatientenAdresse/> .
+@prefix onco: <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+
+<#PatientMapping>
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/patient_11.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "//ADT_GEKID/Menge_Patient/Patient/Patienten_Stammdaten";
+    ];
+ 
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient_{@Patient_ID}";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasPatientAddress;
+    rr:objectMap 
+      [
+       rr:constant ptad:Patient__1;
+      ];
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Patienten_Geschlecht;
+    rr:objectMap 
+      [
+       rml:reference "Patienten_Geschlecht";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Patienten_Vornamen;
+    rr:objectMap 
+    [
+     rml:reference "Patienten_Vornamen";
+   ];
+ ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Patienten_Nachname;
+    rr:objectMap 
+      [
+       rml:reference "Patienten_Nachname";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Patienten_Geburtsdatum;
+    rr:objectMap 
+      [
+       rml:reference "Patienten_Geburtsdatum";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:KrankenkassenNr;
+    rr:objectMap 
+      [
+       rml:reference "KrankenkassenNr";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate rdf:type;
+     rr:objectMap 
+       [ rr:constant onco:Patient;
+       ];
+   ];
+
+ rr:predicateObjectMap 
+   [ rr:predicate onco:PatientenAdresse;
+     rr:objectMap 
+       [ rr:parentTriplesMap <#AddressMapping>;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Patienten_Stammdaten/Menge_Adresse/Adresse";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Patienten_Stammdaten";
+           ];
+       ];
+   ].
+
+
+<#AddressMapping>
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/patient_11.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "//ADT_GEKID/Menge_Patient/Patient/Patienten_Stammdaten/Menge_Adresse/Adresse";
+    ];
+
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/PatientenAdresse/Patient__1_{Patienten_PLZ}";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:PatientenAdresse;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Patienten_Ort;
+    rr:objectMap 
+      [ rml:reference "Patienten_Ort";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Patienten_PLZ;
+    rr:objectMap 
+      [ rml:reference "Patienten_PLZ";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Patienten_Hausnummer;
+    rr:objectMap 
+      [ rml:reference "Patienten_Hausnummer";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Patienten_Strasse;
+    rr:objectMap 
+      [ rml:reference "Patienten_Strasse";
+      ];
+   ].
+
+
+<#LabwertMapping>
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/patient_11.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Laborwert/Laborwert";
+    ];
+ 
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient__1_{/@Laborwert_Datum}";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:PatientenLaborwert;
+      ];
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Laborwert_Typ;
+    rr:objectMap 
+      [ rml:reference "Laborwert_Typ";
+      ];
+   ].
