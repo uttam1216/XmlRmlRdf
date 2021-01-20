@@ -8,7 +8,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix lab: <https://fraunhofer.de/med2icin/ADT-GEKID/resources/> .
 @prefix tmr: <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/>.
-@prefix pmv: <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/MedicalVisit/>.
+@prefix pmv: <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/>.
 @prefix mtd: <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Diagnose/> .
 @prefix dct: <https://fraunhofer.de/med2icin/ADT-GEKID/resources/DiagnoseCTNM/> .
 
