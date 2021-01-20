@@ -1,0 +1,25 @@
+reference links
+
+https://github.com/RMLio/rmlmapper-java/issues/82
+https://github.com/RMLio/rmlmapper-java/#including-functions
+https://github.com/RMLio/RML-Processor/blob/master/src/test/resources/example3/example3.rml.ttl
+https://www.w3.org/TR/r2rml/
+https://www.w3.org/2001/sw/rdb2rdf/r2rml/
+https://stackoverflow.com/questions/60488968/how-to-map-children-element-of-an-xml-file-using-rml-to-create-an-rdf
+http://i3s.unice.fr/~fmichel/xr2rml_specification_v5.html
+https://www.reportlab.com/docs/rml-for-idiots.pdf
+https://rml.io/specs/rml/
+https://huggingface.co/transformers/model_doc/t5.html
+https://pub.uni-bielefeld.de/download/2495397/2526223/template-based_question.pdf
+https://www.ijcai.org/Proceedings/16/Papers/640.pdf
+https://stackoverflow.com/questions/48145682/how-to-itearate-rml-mapping-language-for-xml-node-not-having-id
+https://www.odoo.com/sk_SK/forum/pomoc-1/how-to-display-float-time-widget-field-in-rml-report-126458
+https://rml.io/docs/rml/tutorials/xml/
+https://github.com/RMLio/RML-Mapper/issues/10
+https://stackoverflow.com/questions/64706151/joining-multiple-2-nodes-multihop-mappings-in-rml-rdf-mapping-language
+https://stackoverflow.com/questions/56270841/what-is-the-best-mapping-ttl-file-for-converting-xml-file-into-rdf-by-using-rml
+https://stackoverflow.com/questions/60488968/how-to-map-children-element-of-an-xml-file-using-rml-to-create-an-rdf
+https://github.com/RMLio/rmlmapper-java/issues/17
+
+
+
