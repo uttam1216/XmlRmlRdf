@@ -1,0 +1,126 @@
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Seitenlokalisation> "T" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Diagnosedatum> "20.06.2015" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Primaertumor_ICD_Code> "C18.7" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung> .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+
+
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Seitenlokalisation> "T" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Diagnosedatum> "20.06.2015" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Primaertumor_ICD_Code> "C18.7" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung> .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+
+
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Seitenlokalisation> "T" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Diagnosedatum> "20.06.2015" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Primaertumor_ICD_Code> "C18.7" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung> .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+
+
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Seitenlokalisation> "T" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Diagnosedatum> "20.06.2015" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Primaertumor_ICD_Code> "C18.7" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung> .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+
+
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Seitenlokalisation> "T" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Diagnosedatum> "20.06.2015" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Primaertumor_ICD_Code> "C18.7" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung> .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+
+
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Seitenlokalisation> "T" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Diagnosedatum> "20.06.2015" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Primaertumor_ICD_Code> "C18.7" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung> .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+
+
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Seitenlokalisation> "T" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Diagnosedatum> "20.06.2015" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Primaertumor_ICD_Code> "C18.7" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung> .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNGID/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+
+
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldeanlass> "statusmeldung" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldebegruendung> "V" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldedatum> "14.10.2020" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung> .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasTumorzuordnung> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNG_ID> .
+
+
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldeanlass> "statusmeldung" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldebegruendung> "V" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldedatum> "14.10.2020" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung> .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasTumorzuordnung> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNG_ID> .
+
+
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldeanlass> "statusmeldung" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldebegruendung> "V" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldedatum> "14.10.2020" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung> .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasTumorzuordnung> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNG_ID> .
+
+
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldeanlass> "statusmeldung" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldebegruendung> "V" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldedatum> "14.10.2020" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung> .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasTumorzuordnung> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNG_ID> .
+
+
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldeanlass> "statusmeldung" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldebegruendung> "V" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldedatum> "14.10.2020" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung> .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasTumorzuordnung> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNG_ID> .
+
+
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldeanlass> "statusmeldung" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldebegruendung> "V" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldedatum> "14.10.2020" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung> .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasTumorzuordnung> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNG_ID> .
+
+
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldeanlass> "statusmeldung" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldebegruendung> "V" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldedatum> "14.10.2020" .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung> .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/*PAT_1*> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasTumorzuordnung> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/PAT_MELDUNG_ID> .
+
+
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/PatientenAdresse/Patient/!88893!> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_Strasse> "Lidia-Sorgatz-Ring" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/PatientenAdresse/Patient/!88893!> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_Hausnummer> "8/2" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/PatientenAdresse/Patient/!88893!> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_PLZ> "88893" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/PatientenAdresse/Patient/!88893!> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_Ort> "Burgdorf" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/PatientenAdresse/Patient/!88893!> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/PatientenAdresse> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/PatientenAdresse/Patient/!88893!> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+
+
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/MedicalVisit/+14454.0+> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasMeldung> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/PAT_MELDUNGID> .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/MedicalVisit/+14454.0+> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/MedicalVisit> .
+<http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/MedicalVisit/+14454.0+> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient/+14454.0+> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/KrankenkassenNr> "108377503" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient/+14454.0+> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/goFor> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/MedicalVisit/PAT_ID> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient/+14454.0+> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_Geschlecht> "W" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient/+14454.0+> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_Geburtsdatum> "09.07.2001" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient/+14454.0+> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_Vornamen> "Hans-Ludwig" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient/+14454.0+> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patienten_Nachname> "Pölitz" .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient/+14454.0+> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Patient> .
+<https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient/+14454.0+> <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/hasPatientAddress> <https://fraunhofer.de/med2icin/ADT-GEKID/resources/PatientenAdresse/PAT_ADDR_ID> .
+
+
