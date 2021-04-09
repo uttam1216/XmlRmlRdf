@@ -421,6 +421,2495 @@
     rr:objectMap 
       [ rr:constant onco:MedicalVisit;
       ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasTumorzuordnung;
+    rr:objectMap 
+      [
+       rr:constant tmr:PAT_MELDUNG_ID;
+      ];
+   ]; 
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasDiagnose;
+    rr:objectMap 
+      [
+       rr:constant mtd:PAT_MELDUNG_ID;
+      ];
+   ]; 
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasMenge_Tumorkonferenz;
+    rr:objectMap 
+      [
+       rr:constant mmt:PAT_MELDUNG_ID;
+      ];
+   ]; 
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasMenge_Verlauf;
+    rr:objectMap 
+      [
+       rr:constant mmv:PAT_MELDUNG_ID;
+      ];
+   ]; 
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasMenge_OP;
+    rr:objectMap 
+      [
+       rr:constant opr:PAT_MELDUNG_ID;
+      ];
+   ]; 
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasMenge_ST;
+    rr:objectMap 
+      [
+       rr:constant mst:PAT_MELDUNG_ID;
+      ];
+   ]; 
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasMenge_SYST;
+    rr:objectMap 
+      [
+       rr:constant msyt:PAT_MELDUNG_ID;
+      ];
+   ]; 
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:Meldung;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Meldedatum;
+    rr:objectMap 
+      [
+       rml:reference "Meldedatum";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Meldebegruendung;
+    rr:objectMap 
+      [
+       rml:reference "Meldebegruendung";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Meldeanlass;
+    rr:objectMap 
+      [
+       rml:reference "Meldeanlass";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:Tumorzuordnung;
+     rr:objectMap 
+       [ rr:parentTriplesMap :TumorzuordnungMapping;
+         rr:joinCondition 
+           [ rr:child "@Tumor_ID";
+             rr:parent "../@Tumor_ID";
+           ];
+       ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:Diagnose;
+     rr:objectMap 
+       [ rr:parentTriplesMap :DiagnoseFindingMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/DiagnoseFinding";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung";
+           ];
+       ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:Menge_Tumorkonferenz;
+     rr:objectMap 
+       [ rr:parentTriplesMap :Menge_TumorkonferenzMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Tumorkonferenz";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung";
+           ];
+       ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:Menge_Verlauf;
+     rr:objectMap 
+       [ rr:parentTriplesMap :Menge_VerlaufMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Verlauf";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung";
+           ];
+       ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:STReport;
+     rr:objectMap 
+       [ rr:parentTriplesMap :Menge_STRMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_ST";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung";
+           ];
+       ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:OPReport;
+     rr:objectMap 
+       [ rr:parentTriplesMap :OPReportMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_OP/OP";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung";
+           ];
+       ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:Menge_SYST;
+     rr:objectMap 
+       [ rr:parentTriplesMap :Menge_SYSTMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_SYST";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung";
+           ];
+       ];
+   ].
+
+
+
+:TumorzuordnungMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "//ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Tumorzuordnung";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Tumorzuordnung/{../@Meldung_ID}/~{@Tumor_ID}~"; 
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:Tumorzuordnung;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Primaertumor_ICD_Code;
+    rr:objectMap 
+      [
+       rml:reference "Primaertumor_ICD_Code";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Primaertumor_ICD_Version;
+    rr:objectMap 
+      [
+       rml:reference "Primaertumor_ICD_Version";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Diagnosedatum;
+    rr:objectMap 
+      [
+       rml:reference "Diagnosedatum";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Seitenlokalisation;
+    rr:objectMap 
+      [
+       rml:reference "Seitenlokalisation";
+      ];
+   ].
+
+
+:Menge_TumorkonferenzMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Tumorkonferenz";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Menge_Tumorkonferenz/{../@Meldung_ID}/{@Tumorkonferenz_ID}";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasTumorkonferenz;
+    rr:objectMap 
+      [
+       rr:constant mmtk:;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:Menge_Tumorkonferenz;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:TumorBoardReview;
+     rr:objectMap 
+       [ rr:parentTriplesMap :TumorkonferenzMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Tumorkonferenz/Tumorkonferenz";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Tumorkonferenz";
+           ];
+       ];
+   ].
+
+
+:TumorkonferenzMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Tumorkonferenz/Tumorkonferenz";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Tumorkonferenz/{../../@Meldung_ID}/{@Tumorkonferenz_ID}";
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:TumorBoardReview;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Tumorkonferenz_Datum;
+    rr:objectMap 
+      [
+       rml:reference "Tumorkonferenz_Datum";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Tumorkonferenz_Typ;
+    rr:objectMap 
+      [
+       rml:reference "Tumorkonferenz_Typ";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Anmerkung;
+    rr:objectMap 
+      [
+       rml:reference "Anmerkung";
+      ];
+   ].
+
+
+:Menge_VerlaufMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Verlauf";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Menge_Verlauf/{../@Meldung_ID}/{@Verlauf_ID}";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasVerlauf;
+    rr:objectMap 
+      [
+       rr:constant mmvca:;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:Menge_Verlauf;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:CurrentAssessement;
+     rr:objectMap 
+       [ rr:parentTriplesMap :VerlaufMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Verlauf/Verlauf";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Verlauf";
+           ];
+       ];
+   ].
+
+
+:VerlaufMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Verlauf/Verlauf";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Verlauf/{../../@Meldung_ID}/{@Verlauf_ID}";
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:CurrentAssessement;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasVerlaufTNM;
+    rr:objectMap 
+      [
+       rr:constant mmvt:;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasVerlauf_Histologie;
+    rr:objectMap 
+      [
+       rr:constant mmvh:;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasFM_Fernmetastasen;
+    rr:objectMap 
+      [
+       rr:constant mmvf:;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasTod;
+    rr:objectMap 
+      [
+       rr:constant mmvd:;  
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Untersuchungsdatum_Verlauf;
+    rr:objectMap 
+      [
+       rml:reference "Untersuchungsdatum_Verlauf";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Gesamtbeurteilung_Tumorstatus;
+    rr:objectMap 
+      [
+       rml:reference "Gesamtbeurteilung_Tumorstatus";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Verlauf_Lokaler_Tumorstatus;
+    rr:objectMap 
+      [
+       rml:reference "Verlauf_Lokaler_Tumorstatus";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Verlauf_Tumorstatus_Lymphknoten;
+    rr:objectMap 
+      [
+       rml:reference "Verlauf_Tumorstatus_Lymphknoten";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Verlauf_Tumorstatus_Fernmetastasen;
+    rr:objectMap 
+      [
+       rml:reference "Verlauf_Tumorstatus_Fernmetastasen";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Anmerkung;
+    rr:objectMap 
+      [
+       rml:reference "Anmerkung";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:TNM_stage_grouping;
+     rr:objectMap 
+       [ rr:parentTriplesMap :VerlaufTNMMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Verlauf/Verlauf/TNM";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Verlauf/Verlauf";
+           ];
+       ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:Histology;
+     rr:objectMap 
+       [ rr:parentTriplesMap :VerlaufHistologieMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Verlauf/Verlauf/Histologie";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Verlauf/Verlauf";
+           ];
+       ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:DeathReason;
+     rr:objectMap 
+       [ rr:parentTriplesMap :VerlaufTodMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Verlauf/Verlauf/Tod";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Verlauf/Verlauf";
+           ];
+       ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:Tumorstatus_Fernmetastasen;
+     rr:objectMap 
+       [ rr:parentTriplesMap :VerlaufFM_FernmetastasenMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Verlauf/Verlauf/Menge_FM/Fernmetastase";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Verlauf/Verlauf";
+           ];
+       ];
+   ].
+
+
+:VerlaufTNMMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Verlauf/Verlauf/TNM";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/TNM/{../../../@Meldung_ID}/{../@Verlauf_ID}/{@TNM_ID}";
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:TNM_stage_grouping;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TNM_Datum;
+    rr:objectMap 
+      [
+       rml:reference "TNM_Datum";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TNM_Version;
+    rr:objectMap 
+      [
+       rml:reference "TNM_Version";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TNM_c_p_u_Praefix_T;
+    rr:objectMap 
+      [
+       rml:reference "TNM_c_p_u_Praefix_T";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TNM_T;
+    rr:objectMap 
+      [
+       rml:reference "TNM_T";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TNM_c_p_u_Praefix_N;
+    rr:objectMap 
+      [
+       rml:reference "TNM_c_p_u_Praefix_N";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TNM_N;
+    rr:objectMap 
+      [
+       rml:reference "TNM_N";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TNM_c_p_u_Praefix_M;
+    rr:objectMap 
+      [
+       rml:reference "TNM_c_p_u_Praefix_M";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TNM_M;
+    rr:objectMap 
+      [
+       rml:reference "TNM_M";
+      ];
+   ].
+
+:VerlaufHistologieMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Verlauf/Verlauf/Histologie";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Histologie/{../../../@Meldung_ID}/{../@Verlauf_ID}/((({Tumor_Histologiedatum})))";
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:Histology;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Tumor_Histologiedatum;
+    rr:objectMap 
+      [
+       rml:reference "Tumor_Histologiedatum";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Histologie_EinsendeNr;
+    rr:objectMap 
+      [
+       rml:reference "Histologie_EinsendeNr";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Morphologie_Code;
+    rr:objectMap 
+      [
+       rml:reference "Morphologie_Code";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Morphologie_ICD_O_Version;
+    rr:objectMap 
+      [
+       rml:reference "Morphologie_ICD_O_Version";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Morphologie_Freitext;
+    rr:objectMap 
+      [
+       rml:reference "Morphologie_Freitext";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Grading;
+    rr:objectMap 
+      [
+       rml:reference "Grading";
+      ];
+   ].
+
+:VerlaufTodMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Verlauf/Verlauf/Tod";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Tod/{../../../@Meldung_ID}/{../@Verlauf_ID}/((({Tod_tumorbedingt})))";
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasMenge_Todesursache;
+    rr:objectMap 
+      [
+       rr:constant mmvtt:;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:DeathReason;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Sterbedatum;
+    rr:objectMap 
+      [
+       rml:reference "Sterbedatum";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Tod_tumorbedingt;
+    rr:objectMap 
+      [
+       rml:reference "Tod_tumorbedingt";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:Menge_Todesursache;
+     rr:objectMap 
+       [ rr:parentTriplesMap :VerlaufTodTodesursacheMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Verlauf/Verlauf/Tod/Menge_Todesursache";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Verlauf/Verlauf/Tod";
+           ];
+       ];
+   ].
+
+
+:VerlaufFM_FernmetastasenMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Verlauf/Verlauf/Menge_FM/Fernmetastase";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Fernmetastase/{../../../@Meldung_ID}/{../@Verlauf_ID}/((({FM_Diagnosedatum})))";
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:Tumorstatus_Fernmetastasen;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:FM_Diagnosedatum;
+    rr:objectMap 
+      [
+       rml:reference "FM_Diagnosedatum";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:FM_Lokalisation;
+    rr:objectMap 
+      [
+       rml:reference "FM_Lokalisation";
+      ];
+   ].
+
+
+:VerlaufTodTodesursacheMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Verlauf/Verlauf/Tod/Menge_Todesursache";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Menge_Todesursache/{../../../@Meldung_ID}/{../@Verlauf_ID}/((({Todesursache_ICD})))";
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:Menge_Todesursache;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Todesursache_ICD;
+    rr:objectMap 
+      [
+       rml:reference "Todesursache_ICD";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Todesursache_ICD_Version;
+    rr:objectMap 
+      [
+       rml:reference "Todesursache_ICD_Version";
+      ];
+   ].
+
+
+:DiagnoseFindingMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/DiagnoseFinding/{../@Meldung_ID}/~{@Tumor_ID}~";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasCTNM;
+    rr:objectMap 
+      [
+       rr:constant dct:TUMOR_ID_TNM;
+      ];
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasPTNM;
+    rr:objectMap 
+      [
+       rr:constant dpt:TUMOR_ID_TNM;
+      ];
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasMenge_Histologie;
+    rr:objectMap 
+      [
+       rr:constant dmht:;
+      ];
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasMenge_Fruehere_Tumorerkrankung;
+    rr:objectMap 
+      [
+       rr:constant dmft:;
+      ];
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasModul_Mamma;
+    rr:objectMap 
+      [
+       rr:constant dmm:;
+      ];
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:DiagnoseFinding;
+      ];
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Seitenlokalisation;
+    rr:objectMap 
+      [
+       rml:reference "Seitenlokalisation";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Diagnosesicherung;
+    rr:objectMap 
+      [
+       rml:reference "Diagnosesicherung";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Diagnosedatum;
+    rr:objectMap 
+      [
+       rml:reference "Diagnosedatum";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Primaertumor_Topographie_ICD_O_Freitext;
+    rr:objectMap 
+      [
+       rml:reference "Primaertumor_Topographie_ICD_O_Freitext";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Primaertumor_Topographie_ICD_O_Version;
+    rr:objectMap 
+      [
+       rml:reference "Primaertumor_Topographie_ICD_O_Version";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Primaertumor_Topographie_ICD_O;
+    rr:objectMap 
+      [
+       rml:reference "Primaertumor_Topographie_ICD_O";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Primaertumor_Diagnosetext;
+    rr:objectMap 
+      [
+       rml:reference "Primaertumor_Diagnosetext";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Primaertumor_ICD_Version;
+    rr:objectMap 
+      [
+       rml:reference "Primaertumor_ICD_Version";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Primaertumor_ICD_Code;
+    rr:objectMap 
+      [
+       rml:reference "Primaertumor_ICD_Code";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Allgemeiner_Leistungszustand;
+    rr:objectMap 
+      [
+       rml:reference "Allgemeiner_Leistungszustand";
+      ];
+   ];
+
+ rr:predicateObjectMap 
+   [ rr:predicate onco:ClinicalTNMFinding;
+     rr:objectMap 
+       [ rr:parentTriplesMap :ClinicalTNMFindingMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose/cTNM";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose";
+           ];
+       ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:PathologicTNMFinding;
+     rr:objectMap 
+       [ rr:parentTriplesMap :PathologicTNMFindingMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose/pTNM";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose";
+           ];
+       ];
+   ];
+
+ rr:predicateObjectMap 
+   [ rr:predicate onco:Menge_Fruehere_Tumorerkrankung;
+     rr:objectMap 
+       [ rr:parentTriplesMap :Menge_Fruehere_TumorerkrankungMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose/Menge_Fruehere_Tumorerkrankung";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose";
+           ];
+       ];
+   ];
+
+ rr:predicateObjectMap 
+   [ rr:predicate onco:Menge_Histologie;
+     rr:objectMap 
+       [ rr:parentTriplesMap :Menge_HistologieMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose/Menge_Histologie";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose";
+           ];
+       ];
+   ];
+
+ rr:predicateObjectMap 
+   [ rr:predicate onco:Modul_Mamma;
+     rr:objectMap 
+       [ rr:parentTriplesMap :Modul_MammaMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose/Modul_Mamma";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose";
+           ];
+       ];
+   ].
+
+
+
+:ClinicalTNMFindingMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose/cTNM";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/ClinicalTNMFinding/{../../@Meldung_ID}/{../@Tumor_ID}/°{@TNM_ID}°";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:ClinicalTNMFinding;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TNM_Datum;
+    rr:objectMap 
+      [
+       rml:reference "TNM_Datum";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TNM_c_p_u_Praefix_T;
+    rr:objectMap 
+      [
+       rml:reference "TNM_c_p_u_Praefix_T";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TNM_T;
+    rr:objectMap 
+      [
+       rml:reference "TNM_T";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TNM_c_p_u_Praefix_N;
+    rr:objectMap 
+      [
+       rml:reference "TNM_c_p_u_Praefix_N";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TNM_N;
+    rr:objectMap 
+      [
+       rml:reference "TNM_N";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TNM_c_p_u_Praefix_M;
+    rr:objectMap 
+      [
+       rml:reference "TNM_c_p_u_Praefix_M";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TNM_M;
+    rr:objectMap 
+      [
+       rml:reference "TNM_M";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TNM_L;
+    rr:objectMap 
+      [
+       rml:reference "TNM_L";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TNM_V;
+    rr:objectMap 
+      [
+       rml:reference "TNM_V";
+      ];
+   ].
+
+
+:PathologicTNMFindingMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose/pTNM";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/PathologicTNMFinding/{../../@Meldung_ID}/{../@Tumor_ID}/°{@TNM_ID}°";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:PathologicTNMFinding;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TNM_Datum;
+    rr:objectMap 
+      [
+       rml:reference "TNM_Datum";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TNM_Version;
+    rr:objectMap 
+      [
+       rml:reference "TNM_Version";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TNM_c_p_u_Praefix_T;
+    rr:objectMap 
+      [
+       rml:reference "TNM_c_p_u_Praefix_T";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TNM_T;
+    rr:objectMap 
+      [
+       rml:reference "TNM_T";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TNM_c_p_u_Praefix_N;
+    rr:objectMap 
+      [
+       rml:reference "TNM_c_p_u_Praefix_N";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TNM_N;
+    rr:objectMap 
+      [
+       rml:reference "TNM_N";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TNM_c_p_u_Praefix_M;
+    rr:objectMap 
+      [
+       rml:reference "TNM_c_p_u_Praefix_M";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TNM_M;
+    rr:objectMap 
+      [
+       rml:reference "TNM_M";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TNM_L;
+    rr:objectMap 
+      [
+       rml:reference "TNM_L";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TNM_V;
+    rr:objectMap 
+      [
+       rml:reference "TNM_V";
+      ];
+   ].
+
+
+:Menge_Fruehere_TumorerkrankungMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose/Menge_Fruehere_Tumorerkrankung";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Menge_Fruehere_Tumorerkrankung/{../../@Meldung_ID}/{../@Tumor_ID}/((({Fruehere_Tumorerkrankung})))";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasFruehere_Tumorerkrankung;
+    rr:objectMap 
+      [
+       rr:constant dft:;
+      ];
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:Fruehere_Tumorerkrankung;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:HistologyResult;
+     rr:objectMap 
+       [ rr:parentTriplesMap :Fruehere_TumorerkrankungMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose/Menge_Fruehere_Tumorerkrankung/Fruehere_Tumorerkrankung";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose/Menge_Fruehere_Tumorerkrankung";
+           ];
+       ];
+   ].
+
+
+
+:Fruehere_TumorerkrankungMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose/Menge_Fruehere_Tumorerkrankung/Fruehere_Tumorerkrankung";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Fruehere_Tumorerkrankung/{../../../@Meldung_ID}/{../../@Tumor_ID}/((({Diagnosedatum})))";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:Fruehere_Tumorerkrankung;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Freitext;
+    rr:objectMap 
+      [
+       rml:reference "Freitext";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:ICD_Code;
+    rr:objectMap 
+      [
+       rml:reference "ICD_Code";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:ICD_Version;
+    rr:objectMap 
+      [
+       rml:reference "ICD_Version";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Diagnosedatum;
+    rr:objectMap 
+      [
+       rml:reference "Diagnosedatum";
+      ];
+   ].
+
+
+:Menge_HistologieMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose/Menge_Histologie";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Menge_Histologie/{../../@Meldung_ID}/{../@Tumor_ID}/((({Histologie})))";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasHistologie;
+    rr:objectMap 
+      [
+       rr:constant dht:HISTOLOGIE_ID;
+      ];
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:Menge_Histologie;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:HistologyResult;
+     rr:objectMap 
+       [ rr:parentTriplesMap :HistologieMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose/Menge_Histologie/Histologie";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose/Menge_Histologie";
+           ];
+       ];
+   ].
+
+
+:HistologieMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose/Menge_Histologie/Histologie";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Histologie/{../../../@Meldung_ID}/{../../@Tumor_ID}/{@Histologie_ID}";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:HistologyResult;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Tumor_Histologiedatum;
+    rr:objectMap 
+      [
+       rml:reference "Tumor_Histologiedatum";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Morphologie_Code;
+    rr:objectMap 
+      [
+       rml:reference "Morphologie_Code";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Histologie_EinsendeNr;
+    rr:objectMap 
+      [
+       rml:reference "Histologie_EinsendeNr";
+      ];
+   ]; 
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Morphologie_ICD_O_Version;
+    rr:objectMap 
+      [
+       rml:reference "Morphologie_ICD_O_Version";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Morphologie_Freitext;
+    rr:objectMap 
+      [
+       rml:reference "Morphologie_Freitext";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Grading;
+    rr:objectMap 
+      [
+       rml:reference "Grading";
+      ];
+   ].
+
+:Modul_MammaMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose/Modul_Mamma";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Modul_Mamma/{../../@Meldung_ID}/{../@Tumor_ID}/((({Praetherapeutischer_Menopausenstatus})))";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:Modul_Mamma;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Praetherapeutischer_Menopausenstatus;
+    rr:objectMap 
+      [
+       rml:reference "Praetherapeutischer_Menopausenstatus";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:HormonrezeptorStatus_Oestrogen;
+    rr:objectMap 
+      [
+       rml:reference "HormonrezeptorStatus_Oestrogen";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:HormonrezeptorStatus_Progesteron;
+    rr:objectMap 
+      [
+       rml:reference "HormonrezeptorStatus_Progesteron";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Her2neuStatus;
+    rr:objectMap 
+      [
+       rml:reference "Her2neuStatus";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:PraeopDrahtmarkierung;
+    rr:objectMap 
+      [
+       rml:reference "PraeopDrahtmarkierung";
+      ];
+   ].
+
+
+:OPReportMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_OP/OP";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/OPReport/{../../@Meldung_ID}/={@OP_ID}=";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasMenge_OPS;
+    rr:objectMap 
+      [
+       rr:constant mop:OP_ID_OPS;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasHistologie;
+    rr:objectMap 
+      [
+       rr:constant dht:;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasResidualstatus;
+    rr:objectMap 
+      [
+       rr:constant ors:;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasMenge_Komplikation;
+    rr:objectMap 
+      [
+       rr:constant omk:;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasModul_Mamma_OP;
+    rr:objectMap 
+      [
+       rr:constant mop:;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasMenge_Operateur;
+    rr:objectMap 
+      [
+       rr:constant omo:;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:OPReport;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:OP_Datum;
+    rr:objectMap 
+      [
+       rml:reference "OP_Datum";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:OP_Intention;
+    rr:objectMap 
+      [
+       rml:reference "OP_Intention";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:OP_OPS_Version;
+    rr:objectMap 
+      [
+       rml:reference "OP_OPS_Version";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:Menge_OPS;
+     rr:objectMap 
+       [ rr:parentTriplesMap :Menge_OPSMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_OP/OP/Menge_OPS";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_OP/OP";
+           ];
+       ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:HistologyResult;
+     rr:objectMap 
+       [ rr:parentTriplesMap :OPHistologieMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_OP/OP/Histologie";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_OP/OP";
+           ];
+       ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:ResidualTumorStatus;
+     rr:objectMap 
+       [ rr:parentTriplesMap :ResidualstatusMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_OP/OP/Residualstatus";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_OP/OP";
+           ];
+       ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:Menge_Komplikation;
+     rr:objectMap 
+       [ rr:parentTriplesMap :Menge_KomplikationMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_OP/OP/Menge_Komplikation";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_OP/OP";
+           ];
+       ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:Menge_Operateur;
+     rr:objectMap 
+       [ rr:parentTriplesMap :Menge_OperateurMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_OP/OP/Menge_Operateur";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_OP/OP";
+           ];
+       ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:Menge_OPS;
+     rr:objectMap 
+       [ rr:parentTriplesMap :Modul_MammaOPMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_OP/OP/Modul_Mamma";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_OP/OP";
+           ];
+       ];
+   ].
+
+
+
+:Menge_OPSMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_OP/OP/Menge_OPS";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Menge_OPS/{../../../../@Meldung_ID}/{../../@OP_ID}/´{OP_OPS}´";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:Menge_OPS;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:OP_OPS;
+    rr:objectMap 
+      [
+       rml:reference "OP_OPS";
+      ];
+   ].
+
+:OPHistologieMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_OP/OP/Histologie";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Histologie/{../../../@Meldung_ID}/{../@OP_ID}/{@Histologie_ID}";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:HistologyResult;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Tumor_Histologiedatum;
+    rr:objectMap 
+      [
+       rml:reference "Tumor_Histologiedatum";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Morphologie_Code;
+    rr:objectMap 
+      [
+       rml:reference "Morphologie_Code";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Histologie_EinsendeNr;
+    rr:objectMap 
+      [
+       rml:reference "Histologie_EinsendeNr";
+      ];
+   ]; 
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Morphologie_ICD_O_Version;
+    rr:objectMap 
+      [
+       rml:reference "Morphologie_ICD_O_Version";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Morphologie_Freitext;
+    rr:objectMap 
+      [
+       rml:reference "Morphologie_Freitext";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Grading;
+    rr:objectMap 
+      [
+       rml:reference "Grading";
+      ];
+   ].
+
+
+:ResidualstatusMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_OP/OP/Residualstatus";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Residualstatus/{../../../@Meldung_ID}/{../@OP_ID}/((({Lokale_Beurteilung_Residualstatus})))";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:ResidualTumorStatus;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Lokale_Beurteilung_Residualstatus;
+    rr:objectMap 
+      [
+       rml:reference "Lokale_Beurteilung_Residualstatus";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Gesamtbeurteilung_Residualstatus;
+    rr:objectMap 
+      [
+       rml:reference "Gesamtbeurteilung_Residualstatus";
+      ];
+   ].
+
+:Menge_KomplikationMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_OP/OP/Menge_Komplikation";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Menge_Komplikation/{../../../@Meldung_ID}/{../@OP_ID}/((({OP_Komplikation})))";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:Menge_Komplikation;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:OP_Komplikation;
+    rr:objectMap 
+      [
+       rml:reference "OP_Komplikation";
+      ];
+   ].
+
+:Menge_OperateurMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_OP/OP/Menge_Operateur";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Menge_Operateur/{../../../@Meldung_ID}/{../@OP_ID}/((({Name_Operateur})))";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:Menge_Operateur;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Name_Operateur;
+    rr:objectMap 
+      [
+       rml:reference "Name_Operateur";
+      ];
+   ].
+
+
+:Modul_MammaOPMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_OP/OP/Modul_Mamma";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Modul_Mamma/{../../../@Meldung_ID}/{../@OP_ID}/((({IntraopPraeparatkontrolle})))";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:Menge_OPS;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:IntraopPraeparatkontrolle;
+    rr:objectMap 
+      [
+       rml:reference "IntraopPraeparatkontrolle";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:TumorgroesseInvasiv;
+    rr:objectMap 
+      [
+       rml:reference "TumorgroesseInvasiv";
+      ];
+   ].
+
+
+
+:Menge_STRMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_ST/ST";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/ST/{../../@Meldung_ID}/{@ST_ID}";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasMenge_Bestrahlung;
+    rr:objectMap 
+      [
+       rr:constant mstb:;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasResidualstatus;
+    rr:objectMap 
+      [
+       rr:constant ors:;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasModul_Allgemein;
+    rr:objectMap 
+      [
+       rr:constant msta:;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:STReport;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:ST_Intention;
+    rr:objectMap 
+      [
+       rml:reference "ST_Intention";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:ST_Stellung_OP;
+    rr:objectMap 
+      [
+       rml:reference "ST_Stellung_OP";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Anmerkung;
+    rr:objectMap 
+      [
+       rml:reference "Anmerkung";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:RadiationTherapyResult;
+     rr:objectMap 
+       [ rr:parentTriplesMap :BestrahlungMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_ST/ST/Menge_Bestrahlung/Bestrahlung";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_ST/ST/Menge_Bestrahlung";
+           ];
+       ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:ResidualTumorStatus;
+     rr:objectMap 
+       [ rr:parentTriplesMap :STResidualstatusMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_ST/ST/Residualstatus";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_ST/ST";
+           ];
+       ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:DatumSozialdienstkontakt;
+     rr:objectMap 
+       [ rr:parentTriplesMap :Modul_AllgemeinMapping1;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_ST/ST/Modul_Allgemein/DatumSozialdienstkontakt";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_ST/ST/Modul_Allgemein";
+           ];
+       ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:DatumStudienrekrutierung;
+     rr:objectMap 
+       [ rr:parentTriplesMap :Modul_AllgemeinMapping2;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_ST/ST/Modul_Allgemein/DatumStudienrekrutierung";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_ST/ST/Modul_Allgemein";
+           ];
+       ];
+   ].
+
+
+:BestrahlungMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_ST/ST/Menge_Bestrahlung/Bestrahlung";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Bestrahlung/{../../../../@Meldung_ID}/{../../@ST_ID}/((({ST_Zielgebiet})))";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasST_Einzeldosis;
+    rr:objectMap 
+      [
+       rr:constant mstbe:;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:RadiationTherapyResult;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:ST_Zielgebiet;
+    rr:objectMap 
+      [
+       rml:reference "ST_Zielgebiet";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:ST_Seite_Zielgebiet;
+    rr:objectMap 
+      [
+       rml:reference "ST_Seite_Zielgebiet";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:ST_Beginn_Datum;
+    rr:objectMap 
+      [
+       rml:reference "ST_Beginn_Datum";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:ST_Ende_Datum;
+    rr:objectMap 
+      [
+       rml:reference "ST_Ende_Datum";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:ST_Applikationsart;
+    rr:objectMap 
+      [
+       rml:reference "ST_Applikationsart";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:Einzeldosis;
+     rr:objectMap 
+       [ rr:parentTriplesMap :ST_EinzeldosisMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_ST/ST/Menge_Bestrahlung/Bestrahlung/ST_Einzeldosis";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_ST/ST/Menge_Bestrahlung/Bestrahlung";
+           ];
+       ];
+   ].
+
+:ST_EinzeldosisMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_ST/ST/Menge_Bestrahlung/Bestrahlung/ST_Einzeldosis";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Einzeldosis/{../../../../../@Meldung_ID}/{../../../@ST_ID}/((({Dosis})))";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:Radiation_Therapy;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Dosis;
+    rr:objectMap 
+      [
+       rml:reference "Dosis";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Einheit;
+    rr:objectMap 
+      [
+       rml:reference "Einheit";
+      ];
+   ].
+
+
+:STResidualstatusMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_ST/ST/Residualstatus";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Residualstatus/{../../../@Meldung_ID}/{../@ST_ID}/((({Lokale_Beurteilung_Residualstatus})))";
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:ResidualTumorStatus;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Lokale_Beurteilung_Residualstatus;
+    rr:objectMap 
+      [
+       rml:reference "Lokale_Beurteilung_Residualstatus";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Gesamtbeurteilung_Residualstatus;
+    rr:objectMap 
+      [
+       rml:reference "Gesamtbeurteilung_Residualstatus";
+      ];
+   ].
+
+
+:Modul_AllgemeinMapping1 a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_ST/ST/Modul_Allgemein/DatumSozialdienstkontakt";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/DatumSozialdienstkontakt/{../../../../@Meldung_ID}/{../../@ST_ID}/((({Datum})))";
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:DatumSozialdienstkontakt;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Datum;
+    rr:objectMap 
+      [
+       rml:reference "Datum";
+      ];
+   ].
+
+:Modul_AllgemeinMapping2 a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_ST/ST/Modul_Allgemein/DatumStudienrekrutierung";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/DatumStudienrekrutierung/{../../../../@Meldung_ID}/{../../@ST_ID}/((({NU})))";
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:DatumStudienrekrutierung;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:NU;
+    rr:objectMap 
+      [
+       rml:reference "NU";
+      ];
+   ].
+
+
+
+:Menge_SYSTMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_SYST/SYST";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/SYST/{../../@Meldung_ID}/{@SYST_ID}";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasMenge_TherapieartFinding;
+    rr:objectMap 
+      [
+       rr:constant msytt:;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasMenge_Substanz;
+    rr:objectMap 
+      [
+       rr:constant msyts:;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasSYST_Nebenwirkung;
+    rr:objectMap 
+      [
+       rr:constant msytn:;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:Menge_SYST;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:SYST_Intention;
+    rr:objectMap 
+      [
+       rml:reference "SYST_Intention";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:SYST_Stellung_OP;
+    rr:objectMap 
+      [
+       rml:reference "SYST_Stellung_OP";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:SYST_Beginn_Datum;
+    rr:objectMap 
+      [
+       rml:reference "SYST_Beginn_Datum";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:Menge_Therapieart;
+     rr:objectMap 
+       [ rr:parentTriplesMap :Menge_TherapieartMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_SYST/SYST/Menge_Therapieart";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_SYST/SYST";
+           ];
+       ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:Menge_Substanz;
+     rr:objectMap 
+       [ rr:parentTriplesMap :Menge_SubstanzMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_SYST/SYST/Menge_Substanz";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_SYST/SYST";
+           ];
+       ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:SYST_Nebenwirkung;
+     rr:objectMap 
+       [ rr:parentTriplesMap :SYST_NebenwirkungMapping;
+         rr:joinCondition 
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_SYST/SYST/Menge_Nebenwirkung/SYST_Nebenwirkung";
+             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_SYST/SYST/Menge_Nebenwirkung";
+           ];
+       ];
+   ].
+
+
+:Menge_TherapieartMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_SYST/SYST/Menge_Therapieart";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Menge_Therapieart/((({SYST_Therapieart})))";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:Menge_Therapieart;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:SYST_Therapieart;
+    rr:objectMap 
+      [
+       rml:reference "SYST_Therapieart";
+      ];
+   ].
+
+:Menge_SubstanzMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_SYST/SYST/Menge_Substanz";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Menge_Substanz/{../../../@Meldung_ID}/{../@SYST_ID}/((({SYST_Substanz})))";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:Menge_Substanz;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:SYST_Substanz;
+    rr:objectMap 
+      [
+       rml:reference "SYST_Substanz";
+      ];
+   ].
+
+
+
+:SYST_NebenwirkungMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/Testperson1.xml";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_SYST/SYST/Menge_Nebenwirkung/SYST_Nebenwirkung";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/SYST_Nebenwirkung/{../../../../@Meldung_ID}/{../../@SYST_ID}/((({Nebenwirkung_Grad})))";
+   ];
+
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant onco:SYST_Nebenwirkung;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Nebenwirkung_Grad;
+    rr:objectMap 
+      [
+       rml:reference "Nebenwirkung_Grad";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Nebenwirkung_Art;
+    rr:objectMap 
+      [
+       rml:reference "Nebenwirkung_Art";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Nebenwirkung_Version;
+    rr:objectMap 
+      [
+       rml:reference "Nebenwirkung_Version";
+      ];
    ].
 
 
