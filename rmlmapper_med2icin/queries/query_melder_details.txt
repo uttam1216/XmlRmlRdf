@@ -1,0 +1,25 @@
+prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+                       prefix owl:   <http://www.w3.org/2002/07/owl#>
+                       prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                       PREFIX fced:  <http://iais.fraunhofer.de/vocabs/med2icin/>
+                       PREFIX onco:  <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/>
+                       
+                       SELECT DISTINCT ?Meldende_Stelle ?Melder_KH_Abt_Station_Praxis ?Melder_Arztname ?Melder_Anschrift ?Melder_PLZ ?Melder_Ort
+                                       ?MelderAdresse ?Melder_Bankname ?Melder_BIC ?Melder_IBAN ?Melder_Kontoinhaber 
+                      WHERE 
+                       { 
+                        ?ADT_GEKID onco:hasMenge_Melder ?MengeMelder .
+                        ?MengeMelder rdf:type onco:Menge_Melder .
+                        ?MengeMelder rdf:type owl:NamedIndividual.
+                        OPTIONAL { ?MengeMelder onco:Meldende_Stelle ?Meldende_Stelle. } .
+                        OPTIONAL { ?MengeMelder onco:Melder_KH_Abt_Station_Praxis ?Melder_KH_Abt_Station_Praxis. } .
+                        OPTIONAL { ?MengeMelder onco:Melder_Arztname ?Melder_Arztname. } .
+                        OPTIONAL { ?MengeMelder onco:Melder_Anschrift ?Melder_Anschrift. } .
+                        OPTIONAL { ?MengeMelder onco:Melder_PLZ ?Melder_PLZ. } .
+                        OPTIONAL { ?MengeMelder onco:Melder_Ort ?Melder_Ort. } .
+                        OPTIONAL { ?MengeMelder onco:MelderAdresse ?MelderAdresse. } .
+                        OPTIONAL { ?MengeMelder onco:Melder_Bankname ?Melder_Bankname. } .
+                        OPTIONAL { ?MengeMelder onco:Melder_BIC ?Melder_BIC. } .
+                        OPTIONAL { ?MengeMelder onco:Melder_IBAN ?Melder_IBAN. } .
+                        OPTIONAL { ?MengeMelder onco:MelderAdresse ?Melder_Kontoinhaber. } .
+                       }

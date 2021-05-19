@@ -1,0 +1,30 @@
+prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+                       prefix owl:   <http://www.w3.org/2002/07/owl#>
+                       prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                       PREFIX fced:  <http://iais.fraunhofer.de/vocabs/med2icin/>
+                       PREFIX onco:  <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/>
+                       
+                       SELECT DISTINCT ?Patient  ?Patienten_Geschlecht ?fname ?lname ?Krakenno ?dob 
+                                                 ?patAddress ?strasse ?Patienten_Ort ?Patienten_PLZ ?Patienten_Hausnummer
+
+                      WHERE { 
+
+                       ?patient onco:hasPatient ?Patient.
+                       ?Patient onco:describePatientInfo ?info.
+                       ?Patient rdf:type onco:Patient.
+                       ?Patient rdf:type owl:NamedIndividual.
+                       OPTIONAL { ?Patient onco:Patienten_Geschlecht ?Patienten_Geschlecht. }.
+                       OPTIONAL { ?Patient onco:Patienten_Vornamen ?fname. }. 
+                       OPTIONAL { ?Patient onco:Patienten_Nachname ?lname. }.
+                       OPTIONAL { ?Patient onco:Patienten_Geburtsdatum ?dob. }.
+                       OPTIONAL { ?Patient onco:KrankenkassenNr ?Krakenno. }. 
+
+                       ?Patient onco:hasPatientAddress ?patAddress.
+                       ?patAddress rdf:type onco:PatientenAdresse.
+                       ?patAddress rdf:type owl:NamedIndividual.
+                       OPTIONAL { ?patAddress onco:Patienten_Strasse ?strasse. }. 
+                       OPTIONAL { ?patAddress onco:Patienten_Ort ?Patienten_Ort. }. 
+                       OPTIONAL { ?patAddress onco:Patienten_PLZ ?Patienten_PLZ. }.
+                       OPTIONAL { ?patAddress onco:Patienten_Hausnummer ?Patienten_Hausnummer. }.
+
+                      }

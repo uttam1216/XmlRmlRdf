@@ -1,0 +1,18 @@
+prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+                       prefix owl:   <http://www.w3.org/2002/07/owl#>
+                       prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                       PREFIX fced:  <http://iais.fraunhofer.de/vocabs/med2icin/>
+                       PREFIX onco:  <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/>
+                       
+                       SELECT DISTINCT ?Absender_Bezeichnung ?Absender_Ansprechpartner ?Absender_Anschrift ?Absender_Telefon ?Absender_EMail
+                      WHERE 
+                       {
+                        ?ADT_GEKID onco:hasAbsender ?Absender .
+                        ?Absender rdf:type onco:Absender .
+                        ?Absender rdf:type owl:NamedIndividual.
+                        OPTIONAL { ?Absender onco:Absender_Bezeichnung ?Absender_Bezeichnung. }.
+                        OPTIONAL { ?Absender onco:Absender_Ansprechpartner ?Absender_Ansprechpartner. }.
+                        OPTIONAL { ?Absender onco:Absender_Anschrift ?Absender_Anschrift. }.
+                        OPTIONAL { ?Absender onco:Absender_Telefon ?Absender_Telefon. }.
+                        OPTIONAL { ?Absender onco:Absender_EMail ?Absender_EMail. }.
+                       }
