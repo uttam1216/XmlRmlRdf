@@ -10,11 +10,10 @@
 @prefix pmp: <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Menge_Patient/> .
 @prefix pps: <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patienten_Stammdaten/> .
 @prefix pp: <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Patient/> .
-@prefix pmvt: <https://fraunhofer.de/med2icin/ADT-GEKID/resources/MedicalVisit/> .
 @prefix pmm: <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Menge_Melder/> .
 @prefix onco: <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/> .
-@prefix tmr: <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Tumorzuordnung/> .
-@prefix pmv: <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/Meldung/> .
+@prefix tmr: <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Tumorzuordnung/> .
+@prefix pmv: <https://fraunhofer.de/med2icin/ADT-GEKID/resources/MedicalVisit/> .
 @prefix plab: <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Laborwert/> .
 @prefix mtd: <https://fraunhofer.de/med2icin/ADT-GEKID/resources/DiagnoseFinding/> .
 @prefix mmt: <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Menge_Tumorkonferenz/> .
@@ -46,7 +45,7 @@
 @prefix dft: <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Fruehere_Tumorerkrankung/> .
 @prefix dht: <https://fraunhofer.de/med2icin/ADT-GEKID/resources/HistologyResult/> .
 @prefix dmm: <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Modul_Mamma/> .
-@prefix pmdv: <https://fraunhofer.de/med2icin/ADT-GEKID/resources/MedicalVisit/> .
+@prefix pmvm: <https://fraunhofer.de/med2icin/ADT-GEKID/resources/Meldung/> .
 
 
 :TriplesMap a rr:TriplesMap;
@@ -56,14 +55,14 @@
       rml:iterator "//*[@Schema_Version]";
     ];
  rr:subjectMap 
-   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/ADT-GEKID/{@Schema_Version}";
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/ADT_GEKID/{@Schema_Version}";
    ];
  rr:predicateObjectMap 
    [
     rr:predicate onco:hasAbsender;
     rr:objectMap 
       [
-       rr:constant pab:;
+       rr:constant pab:ABSENDER_ID;
       ];
    ];
  rr:predicateObjectMap 
@@ -123,13 +122,20 @@
     ];
  
  rr:subjectMap 
-   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Absender/{@Absender_ID}";
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Absender/α{@Absender_ID}α";
    ];
  rr:predicateObjectMap 
    [ rr:predicate rdf:type;
      rr:objectMap 
        [ rr:constant onco:Absender;
        ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
    ];
  rr:predicateObjectMap 
    [
@@ -191,14 +197,6 @@
    ];
  rr:predicateObjectMap 
    [
-    rr:predicate onco:goFor;
-    rr:objectMap 
-      [
-       rr:constant pmvt:MELDER_ID;
-      ];
-   ];
- rr:predicateObjectMap 
-   [
     rr:predicate onco:hasPatient;
     rr:objectMap 
       [
@@ -235,6 +233,13 @@
    ];
  rr:predicateObjectMap 
    [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
     rr:predicate onco:describePatientInfo;
     rr:objectMap 
       [
@@ -243,10 +248,10 @@
    ];
  rr:predicateObjectMap 
    [
-    rr:predicate onco:hasMenge_Meldung;
+    rr:predicate onco:goFor;
     rr:objectMap 
       [
-       rr:constant pmv:MELID;
+       rr:constant pmv:PAT_ID;
       ];
    ];
  rr:predicateObjectMap 
@@ -268,9 +273,9 @@
        ];
    ];
  rr:predicateObjectMap 
-   [ rr:predicate onco:Meldung;
+   [ rr:predicate onco:MedicalVisit;
      rr:objectMap 
-       [ rr:parentTriplesMap :Menge_MeldungMapping;
+       [ rr:parentTriplesMap :MedicalVisitMapping;
          rr:joinCondition 
            [ rr:child "*[Menge_Meldung]/@Meldung_ID";  
              rr:parent "@Meldung_ID";
@@ -287,6 +292,42 @@
            ];
        ];
    ].
+
+
+:MedicalVisitMapping a rr:TriplesMap;
+ rml:logicalSource 
+    [ rml:source "/home/ukumar/Desktop/med2icin/replaceable_patient_file_name";
+      rml:referenceFormulation ql:XPath;
+      rml:iterator "//*[@Meldung_ID]";
+    ];
+ rr:subjectMap 
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/MedicalVisit/*{@Meldung_ID}*";
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate rdf:type;
+     rr:objectMap 
+       [ rr:constant onco:MedicalVisit;
+       ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:hasMeldung;
+    rr:objectMap 
+      [
+       rr:constant pmvm:MELID;
+      ];
+   ];
+ rr:predicateObjectMap 
+   [ rr:predicate onco:Meldung;
+     rr:objectMap 
+       [ rr:parentTriplesMap :Menge_MeldungMapping;
+         rr:joinCondition 
+           [ rr:child "*[Menge_Meldung]/@Meldung_ID";  
+             rr:parent "@Meldung_ID";
+           ];
+       ];
+   ].
+
 
 
 :Patienten_StammdatenMapping a rr:TriplesMap;
@@ -437,7 +478,7 @@
    [
     rr:predicate rdf:type;
     rr:objectMap 
-      [ rr:constant onco:MedicalVisit;
+      [ rr:constant onco:Meldung;
       ];
    ];
  rr:predicateObjectMap 
@@ -2962,7 +3003,14 @@
       [ rr:constant onco:Laborwert;
       ];
    ];
-
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Laborwert_Typ;
+    rr:objectMap 
+      [
+       rml:reference "Laborwert_Typ";
+      ];
+   ];
  rr:predicateObjectMap 
    [
     rr:predicate onco:Laborwert_Ergebnis;
@@ -3021,13 +3069,20 @@
       rml:iterator "//*[@Melder_ID]";
     ];
  rr:subjectMap 
-   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Melder/µ{@Melder_ID}µ";
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Menge_Melder/µ{@Melder_ID}µ";
    ];
  rr:predicateObjectMap 
    [ rr:predicate rdf:type;
      rr:objectMap 
-       [ rr:constant onco:Melder;
+       [ rr:constant onco:Menge_Melder;
        ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate rdf:type;
+    rr:objectMap 
+      [ rr:constant owl:NamedIndividual;
+      ];
    ];
  rr:predicateObjectMap 
    [
@@ -3063,6 +3118,14 @@
    ];
  rr:predicateObjectMap 
    [
+    rr:predicate onco:MelderAdresse;
+    rr:objectMap 
+      [
+       rml:reference "MelderAdresse";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
     rr:predicate onco:Melder_PLZ;
     rr:objectMap 
       [
@@ -3075,5 +3138,37 @@
     rr:objectMap 
       [
        rml:reference "Melder_Ort";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Melder_Bankname;
+    rr:objectMap 
+      [
+       rml:reference "Melder_Bankname";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Melder_BIC;
+    rr:objectMap 
+      [
+       rml:reference "Melder_BIC";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Melder_IBAN;
+    rr:objectMap 
+      [
+       rml:reference "Melder_IBAN";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
+    rr:predicate onco:Melder_Kontoinhaber;
+    rr:objectMap 
+      [
+       rml:reference "Melder_Kontoinhaber";
       ];
    ].

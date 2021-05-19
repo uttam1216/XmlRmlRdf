@@ -3,6 +3,7 @@ import os
 from os import listdir
 from os.path import isfile, join
 from rmlm_format_intermediate_out import *
+import time
 
 class transform:
       def __init__(self,home_path):
@@ -42,7 +43,7 @@ class transform:
               global_out_list += new_ttl_list
 
           #writing out the one final combined output file
-          f_out=open('rmlm_final_combined_output.rml.ttl','w')
+          f_out=open(self.home_path+'rmlm_final_combined_output.rml.ttl','w')
           f_out.writelines(global_out_list)
           f_out.close()
 
@@ -54,6 +55,9 @@ if __name__ == "__main__":
       home_path =  "/home/ukumar/Desktop/med2icin/"
    else:
       home_path = input_args.path
+   st = time.time()
    obj_transform = transform(home_path)
    obj_transform.run_rules()
+   et = time.time()
+   print('Total time taken: ',str(et-st))
 

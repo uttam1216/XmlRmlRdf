@@ -17,6 +17,7 @@ def process_out_file(inp_file_name):
     op_ops = 0
     OPID = 0
     melder_id = 0
+    absender_id = 0
 
     #to handle PAT_MELDUNGID problem when multiple Meldung_ID exists for same patient
     lst_mel_id = []
@@ -26,6 +27,8 @@ def process_out_file(inp_file_name):
     PAT_MELDUNGID_O_ind = 'F'
     PAT_MELDUNGID_D_ctr = 0
     PAT_MELDUNGID_O_ctr = 0
+    #MELID_ind = 'F'
+    #MELID_ctr = 0
 
     #list of collection of distinct laborwert_typ to use be replaced by incemental counter as id does not exist for laborwert
     distinct_laborwert_lst = []
@@ -56,6 +59,9 @@ def process_out_file(inp_file_name):
            #fetching Melder ID
            if tpl.count('µ') == 2:
               melder_id = tpl.split('µ')[1]
+           #fetching Absender ID
+           if tpl.count('α') == 2:
+              absender_id = tpl.split('α')[1]
            #fetching one of the address field to make it ID
            if tpl.count('!') == 2:
               addr_plz = tpl.split('!')[1]
@@ -72,7 +78,6 @@ def process_out_file(inp_file_name):
                  lbw_id = tpl.split("'")[1]
                  if not str(lbw_id) in distinct_laborwert_lst:
                     distinct_laborwert_lst.append(str(lbw_id))
-
            #start of formatting for cTNM
            if tpl.count("°") == 2:
               cTNM_id = tpl.split("°")[1]
@@ -113,6 +118,8 @@ def process_out_file(inp_file_name):
     rep_pat_id = '+'+str(pat_id)+'+'
     rep_melder_id = 'µ'+str(melder_id)+'µ'
     rep_addr_plz = '!'+str(addr_plz)+'!'
+    rep_absender_id = 'α'+str(absender_id)+'α'
+
 
     
     for tpl in lines_lst:
@@ -259,6 +266,12 @@ def process_out_file(inp_file_name):
         rep_cTNM_id = '°'+str(cTNM_id)+'°'
         rep_pTNM_id = 'ρ'+str(pTNM_id)+'ρ'
 
+        #fetching one of the Laborwert field to make it ID 
+        if tpl.count("'") == 2:
+           lbw_id = tpl.split("'")[1]
+           if not str(lbw_id) in distinct_laborwert_lst:
+              distinct_laborwert_lst.append(str(lbw_id))
+
         if tpl.count("'") == 2:
            lbw_id = tpl.split("'")[1]
         if len(distinct_laborwert_lst) > 0:
@@ -299,14 +312,9 @@ def process_out_file(inp_file_name):
         if rep_pat_id in tpl:
            tpl = tpl.replace(rep_pat_id,pat_id)
 
-        if rep_melder_id in tpl:
-           tpl = tpl.replace(rep_melder_id,melder_id)
-
         if 'PAT_ID' in tpl:
            tpl = tpl.replace('PAT_ID',pat_id)
 
-        if 'MELDER_ID' in tpl:
-           tpl = tpl.replace('MELDER_ID',melder_id)
 
         #start of formatting for Patient Adress
         if rep_addr_plz in tpl:
@@ -318,6 +326,16 @@ def process_out_file(inp_file_name):
         #start of formatting for Meldung id
         if rep_mel_id in tpl:
            tpl = tpl.replace(rep_mel_id,mel_id)
+
+       
+        '''
+        if 'MELID' in tpl and len(lst_mel_id)>0:
+           tpl = tpl.replace('MELID', lst_mel_id[MELID_ctr])
+           MELID_ind = 'T'
+        if MELID_ind == 'T' and tpl=='\n' and MELID_ctr<len(lst_mel_id):
+           MELID_ctr += 1
+           MELID_ind = 'F'
+        '''
 
         #print('PAT_MELDUNGID_ctr :',PAT_MELDUNGID_ctr)
         #print('length of lst_mel_id: ',len(lst_mel_id))
@@ -359,6 +377,20 @@ def process_out_file(inp_file_name):
 
         if 'PAT_MELDUNG_ID' in tpl:
            tpl = tpl.replace('PAT_MELDUNG_ID',PAT_MELDUNG_ID)
+
+        #start of formatting for Melder_ID
+        if rep_melder_id in tpl:
+           tpl = tpl.replace(rep_melder_id,melder_id)
+
+        if 'MELDER_ID' in tpl:
+           tpl = tpl.replace('MELDER_ID',melder_id)
+
+        #start of formatting for Absender_ID
+        if rep_absender_id in tpl:
+           tpl = tpl.replace(rep_absender_id,absender_id)
+
+        if 'ABSENDER_ID' in tpl:
+           tpl = tpl.replace('ABSENDER_ID',absender_id)
 
         #start of formatting for tumor id
         if rep_tumor_id in tpl:
@@ -403,6 +435,16 @@ def process_out_file(inp_file_name):
         if allow_tpl:       
            new_ttl_list.append(tpl)
     #new_ttl_list.reverse()
+    
+    #Changes added on 10th May to resolve issue of MedicalVisit and Meldung while querying
+    new_new_ttl_list = []
+    for tpl in new_ttl_list:   
+        for item in lst_mel_id:
+            if '<https://fraunhofer.de/med2icin/ADT-GEKID/resources/MedicalVisit/'+str(item)+'> ' in tpl:
+               tpl = tpl.replace('<https://fraunhofer.de/med2icin/ADT-GEKID/resources/MedicalVisit/'+str(item)+'> ', '<https://fraunhofer.de/med2icin/ADT-GEKID/resources/MedicalVisit/'+str(pat_id)+'> ')
+        new_new_ttl_list.append(tpl)
+    new_ttl_list = new_new_ttl_list
+    #End of changes added on 10th May to resolve issue of MedicalVisit and Meldung while querying
 
     #to remove repetitions, mainly of '\n'
     # e.g from [1,1,1,1,1,1,2,3,4,4,5,1,2] to [1, 2, 3, 4, 5, 1, 2]
