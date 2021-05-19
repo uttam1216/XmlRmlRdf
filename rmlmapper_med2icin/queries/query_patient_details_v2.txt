@@ -1,0 +1,79 @@
+prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+                       prefix owl:   <http://www.w3.org/2002/07/owl#>
+                       prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                       PREFIX fced:  <http://iais.fraunhofer.de/vocabs/med2icin/>
+                       PREFIX hdo:   <http://purl.obolibrary.org/obo/> 
+                       PREFIX onco:  <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/>
+                       
+                       SELECT DISTINCT ?Patient  ?Patienten_Geschlecht ?fname ?lname ?Krakenno ?dob
+                                                 ?patAddress ?strasse ?Patienten_Ort ?Patienten_PLZ ?Patienten_Hausnummer
+                                                 ?Meldedatum ?Meldebegruendung ?Meldeanlass
+                                                 ?Primaertumor_ICD_Code ?Primaertumor_ICD_Version ?Diagnosedatum ?Seitenlokalisation
+                                                 ?DiagnoseSeitenlokalisation ?Diagnosesicherung ?DiagnoseDiagnosedatum ?Primaertumor_Topographie_ICD_O_Freitext
+                                                 ?Primaertumor_Topographie_ICD_O_Version ?Primaertumor_Topographie_ICD_O ?Primaertumor_Diagnosetext
+                                                 ?DiagnosePrimaertumor_ICD_Version ?DiagnosePrimaertumor_ICD_Code ?Allgemeiner_Leistungszustand
+
+                      WHERE { 
+                       ?patient onco:hasPatient ?Patient.
+                       ?Patient onco:describePatientInfo ?info.
+                       ?Patient rdf:type onco:Patient.
+                       ?Patient rdf:type owl:NamedIndividual.
+                       OPTIONAL { ?Patient onco:Patienten_Geschlecht ?Patienten_Geschlecht. }.
+                       OPTIONAL { ?Patient onco:Patienten_Vornamen ?fname. }. 
+                       OPTIONAL { ?Patient onco:Patienten_Nachname ?lname. }.
+                       OPTIONAL { ?Patient onco:Patienten_Geburtsdatum ?dob. }.
+                       OPTIONAL { ?Patient onco:KrankenkassenNr ?Krakenno. }. 
+
+                       ?Patient onco:hasPatientAddress ?patAddress.
+                       ?patAddress rdf:type onco:PatientenAdresse.
+                       ?patAddress rdf:type owl:NamedIndividual.
+                       OPTIONAL { ?patAddress onco:Patienten_Strasse ?strasse. }. 
+                       OPTIONAL { ?patAddress onco:Patienten_Ort ?Patienten_Ort. }. 
+                       OPTIONAL { ?patAddress onco:Patienten_PLZ ?Patienten_PLZ. }.
+                       OPTIONAL { ?patAddress onco:Patienten_Hausnummer ?Patienten_Hausnummer. }.
+
+                       ?Patient onco:goFor ?medicalvisit. 
+                       ?medicalvisit rdf:type onco:MedicalVisit.
+                       ?medicalvisit onco:hasMeldung ?mvisit.
+                       
+                       ?mvisit rdf:type owl:NamedIndividual.
+                       ?mvisit rdf:type onco:Meldung.
+                       ?mvisit onco:hasTumorzuordnung ?Tumorzuordnung.
+                       ?mvisit onco:hasDiagnose ?DiagnoseFinding.
+                       ?mvisit onco:hasMenge_Tumorkonferenz ?hasMenge_Tumorkonferenz.
+                       ?mvisit onco:hasMenge_Verlauf ?hasMenge_Verlauf.
+                       ?mvisit onco:hasMenge_OP ?Menge_OP.
+                       ?mvisit onco:hasMenge_ST ?hasMenge_ST.
+                       ?mvisit onco:hasMenge_SYST ?hasMenge_SYST.                      
+                       OPTIONAL { ?mvisit onco:Meldedatum ?Meldedatum. }.
+                       OPTIONAL { ?mvisit onco:Meldebegruendung ?Meldebegruendung. }.
+                       OPTIONAL { ?mvisit onco:Meldeanlass ?Meldeanlass. }.
+                                           
+                       ?Tumorzuordnung rdf:type owl:NamedIndividual.
+                       ?Tumorzuordnung rdf:type onco:Tumorzuordnung.
+                       OPTIONAL { ?Tumorzuordnung onco:Primaertumor_ICD_Code ?Primaertumor_ICD_Code. }.
+                       OPTIONAL { ?Tumorzuordnung onco:Primaertumor_ICD_Version ?Primaertumor_ICD_Version. }.
+                       OPTIONAL { ?Tumorzuordnung onco:Diagnosedatum ?Diagnosedatum. }.
+                       OPTIONAL { ?Tumorzuordnung onco:Seitenlokalisation ?Seitenlokalisation. }.
+            
+                       ?DiagnoseFinding rdf:type owl:NamedIndividual.
+                       ?DiagnoseFinding rdf:type onco:DiagnoseFinding.
+                       ?DiagnoseFinding onco:hasCTNM ?DiagnoseCTNM.
+                       ?DiagnoseFinding onco:hasPTNM ?DiagnosePTNM.
+                       ?DiagnoseFinding onco:hasMenge_Histologie ?DiagnoseMenge_Histologie.
+                       ?DiagnoseFinding onco:hasMenge_Fruehere_Tumorerkrankung ?DiagnoseMenge_Fruehere_Tumorerkrankung.
+                       ?DiagnoseFinding onco:hasModul_Mamma ?DiagnoseModul_Mamma.
+                       OPTIONAL { ?DiagnoseFinding onco:Seitenlokalisation ?DiagnoseSeitenlokalisation. }.
+                       OPTIONAL { ?DiagnoseFinding onco:Diagnosedatum ?Diagnosesicherung. }.
+                       OPTIONAL { ?DiagnoseFinding onco:Diagnosedatum ?DiagnoseDiagnosedatum. }.
+                       OPTIONAL { ?DiagnoseFinding onco:Primaertumor_Topographie_ICD_O_Freitext ?Primaertumor_Topographie_ICD_O_Freitext. }.
+                       OPTIONAL { ?DiagnoseFinding onco:Primaertumor_Topographie_ICD_O_Version ?Primaertumor_Topographie_ICD_O_Version. }.                       
+                       OPTIONAL { ?DiagnoseFinding onco:Primaertumor_Topographie_ICD_O ?Primaertumor_Topographie_ICD_O. }.
+                       OPTIONAL { ?DiagnoseFinding onco:Primaertumor_Diagnosetext ?Primaertumor_Diagnosetext. }.
+                       OPTIONAL { ?DiagnoseFinding onco:Primaertumor_ICD_Version ?DiagnosePrimaertumor_ICD_Version. }.                       
+                       OPTIONAL { ?DiagnoseFinding onco:Primaertumor_ICD_Code ?DiagnosePrimaertumor_ICD_Code. }.
+                       OPTIONAL { ?DiagnoseFinding onco:Allgemeiner_Leistungszustand ?Allgemeiner_Leistungszustand. }.
+
+                       
+                                        
+                      }
