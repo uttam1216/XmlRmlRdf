@@ -598,9 +598,9 @@
  rr:predicateObjectMap 
    [ rr:predicate onco:Menge_Tumorkonferenz;
      rr:objectMap 
-       [ rr:parentTriplesMap :Menge_TumorkonferenzMapping;
+       [ rr:parentTriplesMap :TumorkonferenzMapping;
          rr:joinCondition 
-           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Tumorkonferenz";
+           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Tumorkonferenz/Tumorkonferenz";
              rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung";
            ];
        ];
@@ -712,7 +712,7 @@
       rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Tumorkonferenz";
     ];
  rr:subjectMap 
-   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Menge_Tumorkonferenz/{../@Meldung_ID}/{@Tumorkonferenz_ID}";
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Menge_Tumorkonferenz/{../../@Meldung_ID}/{@Tumorkonferenz_ID}";
    ];
 
  rr:predicateObjectMap 
@@ -756,7 +756,7 @@
       rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Tumorkonferenz/Tumorkonferenz";
     ];
  rr:subjectMap 
-   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Tumorkonferenz/{../../@Meldung_ID}/{@Tumorkonferenz_ID}";
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Menge_Tumorkonferenz/{../../@Meldung_ID}/{@Tumorkonferenz_ID}";
    ];
  rr:predicateObjectMap 
    [
@@ -1321,7 +1321,7 @@
     rr:predicate onco:hasMenge_Histologie;
     rr:objectMap 
       [
-       rr:constant dmht:;
+       rr:constant dmht:MENGE_HIST_ID;
       ];
    ];
 
@@ -1330,7 +1330,7 @@
     rr:predicate onco:hasMenge_Fruehere_Tumorerkrankung;
     rr:objectMap 
       [
-       rr:constant dmft:;
+       rr:constant dmft:MFT_ID;
       ];
    ];
 
@@ -1339,7 +1339,7 @@
     rr:predicate onco:hasModul_Mamma;
     rr:objectMap 
       [
-       rr:constant dmm:;
+       rr:constant dmm:MOD_MAMA_ID;
       ];
    ];
 
@@ -1529,6 +1529,14 @@
    ];
  rr:predicateObjectMap 
    [
+    rr:predicate onco:TNM_Version;
+    rr:objectMap 
+      [
+       rml:reference "TNM_Version";
+      ];
+   ];
+ rr:predicateObjectMap 
+   [
     rr:predicate onco:TNM_c_p_u_Praefix_T;
     rr:objectMap 
       [
@@ -1706,16 +1714,7 @@
       rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose/Menge_Fruehere_Tumorerkrankung";
     ];
  rr:subjectMap 
-   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Menge_Fruehere_Tumorerkrankung/{../../@Meldung_ID}/{../@Tumor_ID}/((({Fruehere_Tumorerkrankung})))";
-   ];
-
- rr:predicateObjectMap 
-   [
-    rr:predicate onco:hasFruehere_Tumorerkrankung;
-    rr:objectMap 
-      [
-       rr:constant dft:;
-      ];
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Menge_Fruehere_Tumorerkrankung/β{../../@Meldung_ID}/{../@Tumor_ID}/((({Fruehere_Tumorerkrankung})))β";
    ];
 
  rr:predicateObjectMap 
@@ -1752,22 +1751,7 @@
       rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose/Menge_Fruehere_Tumorerkrankung/Fruehere_Tumorerkrankung";
     ];
  rr:subjectMap 
-   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Fruehere_Tumorerkrankung/{../../../@Meldung_ID}/{../../@Tumor_ID}/((({Diagnosedatum})))";
-   ];
-
- rr:predicateObjectMap 
-   [
-    rr:predicate rdf:type;
-    rr:objectMap 
-      [ rr:constant owl:NamedIndividual;
-      ];
-   ];
- rr:predicateObjectMap 
-   [
-    rr:predicate rdf:type;
-    rr:objectMap 
-      [ rr:constant onco:Fruehere_Tumorerkrankung;
-      ];
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Menge_Fruehere_Tumorerkrankung/{../../../@Meldung_ID}/{../../@Tumor_ID}/((({Diagnosedatum})))";
    ];
  rr:predicateObjectMap 
    [
@@ -1807,55 +1791,10 @@
  rml:logicalSource 
     [ rml:source "/home/ukumar/Desktop/med2icin/replaceable_patient_file_name";
       rml:referenceFormulation ql:XPath;
-      rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose/Menge_Histologie";
-    ];
- rr:subjectMap 
-   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Menge_Histologie/{../../@Meldung_ID}/{../@Tumor_ID}/((({@Histologie_ID})))";
-   ];
-
- rr:predicateObjectMap 
-   [
-    rr:predicate onco:hasHistologie;
-    rr:objectMap 
-      [
-       rr:constant dht:HISTOLOGIE_ID;
-      ];
-   ];
-
- rr:predicateObjectMap 
-   [
-    rr:predicate rdf:type;
-    rr:objectMap 
-      [ rr:constant owl:NamedIndividual;
-      ];
-   ];
- rr:predicateObjectMap 
-   [
-    rr:predicate rdf:type;
-    rr:objectMap 
-      [ rr:constant onco:Menge_Histologie;
-      ];
-   ];
- rr:predicateObjectMap 
-   [ rr:predicate onco:HistologyResult;
-     rr:objectMap 
-       [ rr:parentTriplesMap :HistologieMapping;
-         rr:joinCondition 
-           [ rr:child "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose/Menge_Histologie/Histologie";
-             rr:parent "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose/Menge_Histologie";
-           ];
-       ];
-   ].
-
-
-:HistologieMapping a rr:TriplesMap;
- rml:logicalSource 
-    [ rml:source "/home/ukumar/Desktop/med2icin/replaceable_patient_file_name";
-      rml:referenceFormulation ql:XPath;
       rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose/Menge_Histologie/Histologie";
     ];
  rr:subjectMap 
-   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Histologie/{../../../@Meldung_ID}/{../../@Tumor_ID}/{@Histologie_ID}";
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Menge_Histologie/γ{../../../@Meldung_ID}/{../../@Tumor_ID}/{@Histologie_ID}γ";
    ];
 
  rr:predicateObjectMap 
@@ -1928,7 +1867,7 @@
       rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Diagnose/Modul_Mamma";
     ];
  rr:subjectMap 
-   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Modul_Mamma/{../../@Meldung_ID}/{../@Tumor_ID}/((({Praetherapeutischer_Menopausenstatus})))";
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Modul_Mamma/δ{../../@Meldung_ID}/{../@Tumor_ID}/((({Praetherapeutischer_Menopausenstatus})))δ";
    ];
 
  rr:predicateObjectMap 

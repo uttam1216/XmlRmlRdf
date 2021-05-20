@@ -18,6 +18,12 @@ def process_out_file(inp_file_name):
     OPID = 0
     melder_id = 0
     absender_id = 0
+    #Menge_Fruehere_Tumorerkrankung ID
+    mft_id = 0
+    #Diagnose Menge Hist ID
+    menge_hist_id = 0
+    #Diagnose Module_Mama_ID
+    mod_mama_id = 0
 
     #to handle PAT_MELDUNGID problem when multiple Meldung_ID exists for same patient
     lst_mel_id = []
@@ -62,6 +68,10 @@ def process_out_file(inp_file_name):
            #fetching Absender ID
            if tpl.count('α') == 2:
               absender_id = tpl.split('α')[1]
+           #fetching Menge Histologie ID
+           if tpl.count('γ') == 2:
+              menge_hist_id = tpl.split('γ')[1]
+
            #fetching one of the address field to make it ID
            if tpl.count('!') == 2:
               addr_plz = tpl.split('!')[1]
@@ -119,7 +129,7 @@ def process_out_file(inp_file_name):
     rep_melder_id = 'µ'+str(melder_id)+'µ'
     rep_addr_plz = '!'+str(addr_plz)+'!'
     rep_absender_id = 'α'+str(absender_id)+'α'
-
+    rep_menge_hist_id = 'γ'+str(menge_hist_id)+'γ'
 
     
     for tpl in lines_lst:
@@ -392,6 +402,13 @@ def process_out_file(inp_file_name):
         if 'ABSENDER_ID' in tpl:
            tpl = tpl.replace('ABSENDER_ID',absender_id)
 
+        #start of formatting for MENGE_HIST_ID
+        if rep_menge_hist_id in tpl:
+           tpl = tpl.replace(rep_menge_hist_id,menge_hist_id)
+
+        if 'MENGE_HIST_ID' in tpl:
+           tpl = tpl.replace('MENGE_HIST_ID',menge_hist_id)
+
         #start of formatting for tumor id
         if rep_tumor_id in tpl:
            tpl = tpl.replace(rep_tumor_id,tumor_id) 
@@ -442,9 +459,45 @@ def process_out_file(inp_file_name):
         for item in lst_mel_id:
             if '<https://fraunhofer.de/med2icin/ADT-GEKID/resources/MedicalVisit/'+str(item)+'> ' in tpl:
                tpl = tpl.replace('<https://fraunhofer.de/med2icin/ADT-GEKID/resources/MedicalVisit/'+str(item)+'> ', '<https://fraunhofer.de/med2icin/ADT-GEKID/resources/MedicalVisit/'+str(pat_id)+'> ')
+
+        #changes added on 19 May 2021
+        #fetching MFT ID
+        if tpl.count('β') == 2:
+           mft_id = tpl.split('β')[1]
+        rep_mft_id = 'β'+str(mft_id)+'β'
+        #end of changes added on 19 May 2021
+
+        #changes added on 20th May 2021
+        #fetching MOD MAMA ID
+        if tpl.count('δ') == 2:
+           mod_mama_id = tpl.split('δ')[1]
+        rep_mod_mama_id = 'δ'+str(mod_mama_id)+'δ'
+        #end of changes added on 20th May 2021
+
+
+
         new_new_ttl_list.append(tpl)
     new_ttl_list = new_new_ttl_list
     #End of changes added on 10th May to resolve issue of MedicalVisit and Meldung while querying
+
+    #Changes added on 19th and 20th May to resolve MFT ID issue while querying
+    new_new_ttl_list = []
+    for tpl in new_ttl_list:   
+        #start of formatting for MFT_ID
+        if rep_mft_id in tpl:
+           tpl = tpl.replace(rep_mft_id,mft_id)
+        if 'MFT_ID' in tpl:
+           tpl = tpl.replace('MFT_ID',mft_id)
+
+        #start of formatting for Module_Mama_ID
+        if rep_mod_mama_id in tpl:
+           tpl = tpl.replace(rep_mod_mama_id,mod_mama_id)
+        if 'MOD_MAMA_ID' in tpl:
+           tpl = tpl.replace('MOD_MAMA_ID',mod_mama_id)
+
+        new_new_ttl_list.append(tpl)
+    new_ttl_list = new_new_ttl_list
+    #End of changes added on 19th and 20th May to resolve MFT ID issue while querying
 
     #to remove repetitions, mainly of '\n'
     # e.g from [1,1,1,1,1,1,2,3,4,4,5,1,2] to [1, 2, 3, 4, 5, 1, 2]
