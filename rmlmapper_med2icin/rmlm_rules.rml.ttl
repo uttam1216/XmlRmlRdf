@@ -849,7 +849,7 @@
       rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_Verlauf/Verlauf";
     ];
  rr:subjectMap 
-   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Verlauf/{../../@Meldung_ID}/{@Verlauf_ID}";
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Menge_Verlauf/{../../@Meldung_ID}/{@Verlauf_ID}";
    ];
  rr:predicateObjectMap 
    [
@@ -2350,7 +2350,7 @@
       rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_ST/ST";
     ];
  rr:subjectMap 
-   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/ST/{../../@Meldung_ID}/{@ST_ID}";
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/STReport/{../../@Meldung_ID}/{@ST_ID}";
    ];
 
  rr:predicateObjectMap 
@@ -2696,7 +2696,7 @@
       rml:iterator "/ADT_GEKID/Menge_Patient/Patient/Menge_Meldung/Meldung/Menge_SYST/SYST";
     ];
  rr:subjectMap 
-   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/SYST/{../../@Meldung_ID}/{@SYST_ID}";
+   [ rr:template "https://fraunhofer.de/med2icin/ADT-GEKID/resources/Menge_SYST/{../../@Meldung_ID}/{@SYST_ID}";
    ];
 
  rr:predicateObjectMap 
