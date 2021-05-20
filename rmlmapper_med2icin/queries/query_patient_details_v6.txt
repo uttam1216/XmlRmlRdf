@@ -6,27 +6,27 @@ prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
                        PREFIX onco:  <http://iais.fraunhofer.de/vocabs/med2icin/ADT-GEKID/>
                        
                        SELECT DISTINCT ?Patient  ?Patienten_Geschlecht ?fname ?lname ?Krakenno ?dob
-                                                 ?patAddress ?strasse ?Patienten_Ort ?Patienten_PLZ ?Patienten_Hausnummer
-                                                 ?Meldedatum ?Meldebegruendung ?Meldeanlass
-                                                 ?Primaertumor_ICD_Code ?Primaertumor_ICD_Version ?Diagnosedatum ?Seitenlokalisation
-                                                 ?DiagnoseSeitenlokalisation ?Diagnosesicherung ?DiagnoseDiagnosedatum ?Primaertumor_Topographie_ICD_O_Freitext
-                                                 ?Primaertumor_Topographie_ICD_O_Version ?Primaertumor_Topographie_ICD_O ?Primaertumor_Diagnosetext
-                                                 ?DiagnosePrimaertumor_ICD_Version ?DiagnosePrimaertumor_ICD_Code ?Allgemeiner_Leistungszustand
-                                                 ?ClinicalTNM_Datum ?ClinicalTNM_Version ?ClinicalTNM_c_p_u_Praefix_T ?ClinicalTNM_T ?ClinicalTNM_c_p_u_Praefix_N
-                                                 ?ClinicalTNM_N ?ClinicalTNM_c_p_u_Praefix_M ?ClinicalTNM_M ?ClinicalTNM_L ?ClinicalTNM_V
-                                                 ?PathoTNM_Datum ?PathoTNM_Version ?PathoTNM_c_p_u_Praefix_T ?PathoTNM_T ?PathoTNM_c_p_u_Praefix_N
-                                                 ?PathoTNM_N ?PathoTNM_c_p_u_Praefix_M ?PathoTNM_M ?PathoTNM_L ?PathoTNM_V
-                                                 ?MftFreitext ?MftICD_Code ?MftICD_Version ?MftDiagnosedatum
-                                                 ?DiagnoseHistTumor_Histologiedatum ?DiagnoseHistMorphologie_Code ?DiagnoseHistMorphologie_ICD_O_Version
-                                                 ?DiagnoseHistMorphologie_Freitext ?DiagnoseHistGrading
-                                                 ?DiagnoseMMPraetherapeutischer_Menopausenstatus ?DiagnoseMMHormonrezeptorStatus_Oestrogen
-                                                 ?DiagnoseMMHormonrezeptorStatus_Progesteron ?DiagnoseMMHer2neuStatus ?DiagnoseMMPraeopDrahtmarkierung
-                                                 
-
-
-
-
-                      WHERE { 
+                                       ?patAddress ?strasse ?Patienten_Ort ?Patienten_PLZ ?Patienten_Hausnummer
+                                       ?Meldung ?Menge_OP 
+                                       ?Meldedatum ?Meldebegruendung ?Meldeanlass
+                                       ?Primaertumor_ICD_Code ?Primaertumor_ICD_Version ?Diagnosedatum ?Seitenlokalisation
+                                       ?DiagnoseSeitenlokalisation ?Diagnosesicherung ?DiagnoseDiagnosedatum ?Primaertumor_Topographie_ICD_O_Freitext
+                                       ?Primaertumor_Topographie_ICD_O_Version ?Primaertumor_Topographie_ICD_O ?Primaertumor_Diagnosetext
+                                       ?DiagnosePrimaertumor_ICD_Version ?DiagnosePrimaertumor_ICD_Code ?Allgemeiner_Leistungszustand
+                                       ?ClinicalTNM_Datum ?ClinicalTNM_Version ?ClinicalTNM_c_p_u_Praefix_T ?ClinicalTNM_T ?ClinicalTNM_c_p_u_Praefix_N
+                                       ?ClinicalTNM_N ?ClinicalTNM_c_p_u_Praefix_M ?ClinicalTNM_M ?ClinicalTNM_L ?ClinicalTNM_V
+                                       ?PathoTNM_Datum ?PathoTNM_Version ?PathoTNM_c_p_u_Praefix_T ?PathoTNM_T ?PathoTNM_c_p_u_Praefix_N
+                                       ?PathoTNM_N ?PathoTNM_c_p_u_Praefix_M ?PathoTNM_M ?PathoTNM_L ?PathoTNM_V
+                                       ?MftFreitext ?MftICD_Code ?MftICD_Version ?MftDiagnosedatum
+                                       ?DiagnoseHistTumor_Histologiedatum ?DiagnoseHistMorphologie_Code ?DiagnoseHistMorphologie_ICD_O_Version
+                                       ?DiagnoseHistMorphologie_Freitext ?DiagnoseHistGrading
+                                       ?DiagnoseMMPraetherapeutischer_Menopausenstatus ?DiagnoseMMHormonrezeptorStatus_Oestrogen
+                                       ?DiagnoseMMHormonrezeptorStatus_Progesteron ?DiagnoseMMHer2neuStatus ?DiagnoseMMPraeopDrahtmarkierung
+                                       ?Untersuchungsdatum_Verlauf ?Gesamtbeurteilung_Tumorstatus ?Verlauf_Lokaler_Tumorstatus ?Verlauf_Tumorstatus_Lymphknoten 
+                                       ?Verlauf_Tumorstatus_Fernmetastasen                                             
+                       WHERE 
+                       { 
+   
                        ?patient onco:hasPatient ?Patient.
                        ?Patient onco:describePatientInfo ?info.
                        ?Patient rdf:type onco:Patient.
@@ -45,6 +45,7 @@ prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
                        OPTIONAL { ?patAddress onco:Patienten_PLZ ?Patienten_PLZ. }.
                        OPTIONAL { ?patAddress onco:Patienten_Hausnummer ?Patienten_Hausnummer. }.
 
+
                        ?Patient onco:goFor ?medicalvisit. 
                        ?medicalvisit rdf:type onco:MedicalVisit.
                        ?medicalvisit onco:hasMeldung ?Meldung.
@@ -53,22 +54,24 @@ prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
                        ?Meldung rdf:type onco:Meldung.
                        ?Meldung onco:hasTumorzuordnung ?Tumorzuordnung.
                        ?Meldung onco:hasDiagnose ?DiagnoseFinding.
+                       ?Meldung onco:hasMenge_OP ?Menge_OP.
                        ?Meldung onco:hasMenge_Tumorkonferenz ?Menge_Tumorkonferenz.
                        ?Meldung onco:hasMenge_Verlauf ?Menge_Verlauf.
-                       ?Meldung onco:hasMenge_OP ?Menge_OP.
                        ?Meldung onco:hasMenge_ST ?Menge_ST.
                        ?Meldung onco:hasMenge_SYST ?Menge_SYST.                      
                        OPTIONAL { ?Meldung onco:Meldedatum ?Meldedatum. }.
                        OPTIONAL { ?Meldung onco:Meldebegruendung ?Meldebegruendung. }.
                        OPTIONAL { ?Meldung onco:Meldeanlass ?Meldeanlass. }.
-                                           
+
+
                        ?Tumorzuordnung rdf:type owl:NamedIndividual.
                        ?Tumorzuordnung rdf:type onco:Tumorzuordnung.
                        OPTIONAL { ?Tumorzuordnung onco:Primaertumor_ICD_Code ?Primaertumor_ICD_Code. }.
                        OPTIONAL { ?Tumorzuordnung onco:Primaertumor_ICD_Version ?Primaertumor_ICD_Version. }.
                        OPTIONAL { ?Tumorzuordnung onco:Diagnosedatum ?Diagnosedatum. }.
                        OPTIONAL { ?Tumorzuordnung onco:Seitenlokalisation ?Seitenlokalisation. }.
-            
+
+
                        ?DiagnoseFinding rdf:type owl:NamedIndividual.
                        ?DiagnoseFinding rdf:type onco:DiagnoseFinding.
                        ?DiagnoseFinding onco:hasCTNM ?DiagnoseCTNM.
@@ -113,14 +116,12 @@ prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
                        OPTIONAL { ?DiagnosePTNM onco:TNM_L ?PathoTNM_L. }.
                        OPTIONAL { ?DiagnosePTNM onco:TNM_V ?PathoTNM_V. }.
 
-
                        ?DiagnoseMenge_Fruehere_Tumorerkrankung rdf:type owl:NamedIndividual.
                        ?DiagnoseMenge_Fruehere_Tumorerkrankung rdf:type onco:Fruehere_Tumorerkrankung.
                        OPTIONAL { ?DiagnoseMenge_Fruehere_Tumorerkrankung onco:Freitext ?MftFreitext. }.
                        OPTIONAL { ?DiagnoseMenge_Fruehere_Tumorerkrankung onco:ICD_Code ?MftICD_Code. }. 
                        OPTIONAL { ?DiagnoseMenge_Fruehere_Tumorerkrankung onco:ICD_Version ?MftICD_Version. }.
                        OPTIONAL { ?DiagnoseMenge_Fruehere_Tumorerkrankung onco:Diagnosedatum ?MftDiagnosedatum. }.
-
 
                        ?DiagnoseMenge_Histologie rdf:type owl:NamedIndividual.
                        ?DiagnoseMenge_Histologie rdf:type onco:HistologyResult.
@@ -130,14 +131,31 @@ prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
                        OPTIONAL { ?DiagnoseMenge_Histologie onco:Morphologie_Freitext ?DiagnoseHistMorphologie_Freitext. }.
                        OPTIONAL { ?DiagnoseMenge_Histologie onco:Grading ?DiagnoseHistGrading. }.
                        
-                       
                        ?DiagnoseModul_Mamma rdf:type owl:NamedIndividual.
                        ?DiagnoseModul_Mamma rdf:type onco:Modul_Mamma.
                        OPTIONAL { ?DiagnoseModul_Mamma onco:Praetherapeutischer_Menopausenstatus ?DiagnoseMMPraetherapeutischer_Menopausenstatus. }.
                        OPTIONAL { ?DiagnoseModul_Mamma onco:HormonrezeptorStatus_Oestrogen ?DiagnoseMMHormonrezeptorStatus_Oestrogen. }. 
                        OPTIONAL { ?DiagnoseModul_Mamma onco:HormonrezeptorStatus_Progesteron ?DiagnoseMMHormonrezeptorStatus_Progesteron. }.
                        OPTIONAL { ?DiagnoseModul_Mamma onco:Her2neuStatus ?DiagnoseMMHer2neuStatus. }.
-                       OPTIONAL { ?DiagnoseModul_Mamma onco:PraeopDrahtmarkierung ?DiagnoseMMPraeopDrahtmarkierung. }.                       
+                       OPTIONAL { ?DiagnoseModul_Mamma onco:PraeopDrahtmarkierung ?DiagnoseMMPraeopDrahtmarkierung. }.  
+
+
+                       OPTIONAL {?Menge_Verlauf rdf:type owl:NamedIndividual. }.
+                       OPTIONAL {?Menge_Verlauf rdf:type onco:Modul_Mamma. }.
+                       OPTIONAL {?Menge_Verlauf onco:hasVerlaufTNM ?VerlaufTNM. }.
+                       OPTIONAL {?Menge_Verlauf onco:hasVerlauf_Histologie ?Verlauf_Histologie. }.
+                       OPTIONAL {?Menge_Verlauf onco:hasFM_Fernmetastasen ?FM_Fernmetastasen. }.
+                       OPTIONAL {?Menge_Verlauf onco:hasTod ?Tod. }.
+                       OPTIONAL { ?Menge_Verlauf onco:Untersuchungsdatum_Verlauf ?Untersuchungsdatum_Verlauf. }.
+                       OPTIONAL { ?Menge_Verlauf onco:Gesamtbeurteilung_Tumorstatus ?Gesamtbeurteilung_Tumorstatus. }.
+                       OPTIONAL { ?Menge_Verlauf onco:Verlauf_Lokaler_Tumorstatus ?Verlauf_Lokaler_Tumorstatus. }.
+                       OPTIONAL { ?Menge_Verlauf onco:Verlauf_Tumorstatus_Lymphknoten ?Verlauf_Tumorstatus_Lymphknoten. }.
+                       OPTIONAL { ?Menge_Verlauf onco:Verlauf_Tumorstatus_Fernmetastasen ?Verlauf_Tumorstatus_Fernmetastasen. }.
                        
-                                        
-                      }
+
+
+                       
+                       }
+                       
+                                      
+

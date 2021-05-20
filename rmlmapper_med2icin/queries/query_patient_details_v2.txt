@@ -40,11 +40,11 @@ prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
                        ?Meldung rdf:type onco:Meldung.
                        ?Meldung onco:hasTumorzuordnung ?Tumorzuordnung.
                        ?Meldung onco:hasDiagnose ?DiagnoseFinding.
-                       ?Meldung onco:hasMenge_Tumorkonferenz ?hasMenge_Tumorkonferenz.
-                       ?Meldung onco:hasMenge_Verlauf ?hasMenge_Verlauf.
+                       ?Meldung onco:hasMenge_Tumorkonferenz ?Menge_Tumorkonferenz.
+                       ?Meldung onco:hasMenge_Verlauf ?Menge_Verlauf.
                        ?Meldung onco:hasMenge_OP ?Menge_OP.
-                       ?Meldung onco:hasMenge_ST ?hasMenge_ST.
-                       ?Meldung onco:hasMenge_SYST ?hasMenge_SYST.                      
+                       ?Meldung onco:hasMenge_ST ?Menge_ST.
+                       ?Meldung onco:hasMenge_SYST ?Menge_SYST.                      
                        OPTIONAL { ?Meldung onco:Meldedatum ?Meldedatum. }.
                        OPTIONAL { ?Meldung onco:Meldebegruendung ?Meldebegruendung. }.
                        OPTIONAL { ?Meldung onco:Meldeanlass ?Meldeanlass. }.
