@@ -40,20 +40,20 @@ prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
 
                        ?Patient onco:goFor ?medicalvisit. 
                        ?medicalvisit rdf:type onco:MedicalVisit.
-                       ?medicalvisit onco:hasMeldung ?mvisit.
+                       ?medicalvisit onco:hasMeldung ?Meldung.
                        
-                       ?mvisit rdf:type owl:NamedIndividual.
-                       ?mvisit rdf:type onco:Meldung.
-                       ?mvisit onco:hasTumorzuordnung ?Tumorzuordnung.
-                       ?mvisit onco:hasDiagnose ?DiagnoseFinding.
-                       ?mvisit onco:hasMenge_Tumorkonferenz ?hasMenge_Tumorkonferenz.
-                       ?mvisit onco:hasMenge_Verlauf ?hasMenge_Verlauf.
-                       ?mvisit onco:hasMenge_OP ?Menge_OP.
-                       ?mvisit onco:hasMenge_ST ?hasMenge_ST.
-                       ?mvisit onco:hasMenge_SYST ?hasMenge_SYST.                      
-                       OPTIONAL { ?mvisit onco:Meldedatum ?Meldedatum. }.
-                       OPTIONAL { ?mvisit onco:Meldebegruendung ?Meldebegruendung. }.
-                       OPTIONAL { ?mvisit onco:Meldeanlass ?Meldeanlass. }.
+                       ?Meldung rdf:type owl:NamedIndividual.
+                       ?Meldung rdf:type onco:Meldung.
+                       ?Meldung onco:hasTumorzuordnung ?Tumorzuordnung.
+                       ?Meldung onco:hasDiagnose ?DiagnoseFinding.
+                       ?Meldung onco:hasMenge_Tumorkonferenz ?hasMenge_Tumorkonferenz.
+                       ?Meldung onco:hasMenge_Verlauf ?hasMenge_Verlauf.
+                       ?Meldung onco:hasMenge_OP ?Menge_OP.
+                       ?Meldung onco:hasMenge_ST ?hasMenge_ST.
+                       ?Meldung onco:hasMenge_SYST ?hasMenge_SYST.                      
+                       OPTIONAL { ?Meldung onco:Meldedatum ?Meldedatum. }.
+                       OPTIONAL { ?Meldung onco:Meldebegruendung ?Meldebegruendung. }.
+                       OPTIONAL { ?Meldung onco:Meldeanlass ?Meldeanlass. }.
                                            
                        ?Tumorzuordnung rdf:type owl:NamedIndividual.
                        ?Tumorzuordnung rdf:type onco:Tumorzuordnung.
@@ -104,6 +104,7 @@ prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
                        OPTIONAL { ?DiagnosePTNM onco:TNM_c_p_u_Praefix_M ?PathoTNM_c_p_u_Praefix_M. }.
                        OPTIONAL { ?DiagnosePTNM onco:TNM_M ?PathoTNM_M. }. 
                        OPTIONAL { ?DiagnosePTNM onco:TNM_L ?PathoTNM_L. }.
-                       OPTIONAL { ?DiagnosePTNM onco:TNM_V ?PathoTNM_V. }.                  
+                       OPTIONAL { ?DiagnosePTNM onco:TNM_V ?PathoTNM_V. }.
+                       
                                         
                       }

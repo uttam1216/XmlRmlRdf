@@ -12,6 +12,19 @@ prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
                                                  ?DiagnoseSeitenlokalisation ?Diagnosesicherung ?DiagnoseDiagnosedatum ?Primaertumor_Topographie_ICD_O_Freitext
                                                  ?Primaertumor_Topographie_ICD_O_Version ?Primaertumor_Topographie_ICD_O ?Primaertumor_Diagnosetext
                                                  ?DiagnosePrimaertumor_ICD_Version ?DiagnosePrimaertumor_ICD_Code ?Allgemeiner_Leistungszustand
+                                                 ?ClinicalTNM_Datum ?ClinicalTNM_Version ?ClinicalTNM_c_p_u_Praefix_T ?ClinicalTNM_T ?ClinicalTNM_c_p_u_Praefix_N
+                                                 ?ClinicalTNM_N ?ClinicalTNM_c_p_u_Praefix_M ?ClinicalTNM_M ?ClinicalTNM_L ?ClinicalTNM_V
+                                                 ?PathoTNM_Datum ?PathoTNM_Version ?PathoTNM_c_p_u_Praefix_T ?PathoTNM_T ?PathoTNM_c_p_u_Praefix_N
+                                                 ?PathoTNM_N ?PathoTNM_c_p_u_Praefix_M ?PathoTNM_M ?PathoTNM_L ?PathoTNM_V
+                                                 ?MftFreitext ?MftICD_Code ?MftICD_Version ?MftDiagnosedatum
+                                                 ?DiagnoseHistTumor_Histologiedatum ?DiagnoseHistMorphologie_Code ?DiagnoseHistMorphologie_ICD_O_Version
+                                                 ?DiagnoseHistMorphologie_Freitext ?DiagnoseHistGrading
+                                                 ?DiagnoseMMPraetherapeutischer_Menopausenstatus ?DiagnoseMMHormonrezeptorStatus_Oestrogen
+                                                 ?DiagnoseMMHormonrezeptorStatus_Progesteron ?DiagnoseMMHer2neuStatus ?DiagnoseMMPraeopDrahtmarkierung
+                                                 
+
+
+
 
                       WHERE { 
                        ?patient onco:hasPatient ?Patient.
@@ -60,8 +73,8 @@ prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
                        ?DiagnoseFinding rdf:type onco:DiagnoseFinding.
                        ?DiagnoseFinding onco:hasCTNM ?DiagnoseCTNM.
                        ?DiagnoseFinding onco:hasPTNM ?DiagnosePTNM.
-                       ?DiagnoseFinding onco:hasMenge_Histologie ?DiagnoseMenge_Histologie.
                        ?DiagnoseFinding onco:hasMenge_Fruehere_Tumorerkrankung ?DiagnoseMenge_Fruehere_Tumorerkrankung.
+                       ?DiagnoseFinding onco:hasMenge_Histologie ?DiagnoseMenge_Histologie.
                        ?DiagnoseFinding onco:hasModul_Mamma ?DiagnoseModul_Mamma.
                        OPTIONAL { ?DiagnoseFinding onco:Seitenlokalisation ?DiagnoseSeitenlokalisation. }.
                        OPTIONAL { ?DiagnoseFinding onco:Diagnosedatum ?Diagnosesicherung. }.
@@ -74,6 +87,57 @@ prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
                        OPTIONAL { ?DiagnoseFinding onco:Primaertumor_ICD_Code ?DiagnosePrimaertumor_ICD_Code. }.
                        OPTIONAL { ?DiagnoseFinding onco:Allgemeiner_Leistungszustand ?Allgemeiner_Leistungszustand. }.
 
+                       ?DiagnoseCTNM rdf:type owl:NamedIndividual.
+                       ?DiagnoseCTNM rdf:type onco:ClinicalTNMFinding.
+                       OPTIONAL { ?DiagnoseCTNM onco:TNM_Datum ?ClinicalTNM_Datum. }.
+                       OPTIONAL { ?DiagnoseCTNM onco:TNM_Version ?ClinicalTNM_Version. }.
+                       OPTIONAL { ?DiagnoseCTNM onco:TNM_c_p_u_Praefix_T ?ClinicalTNM_c_p_u_Praefix_T. }.
+                       OPTIONAL { ?DiagnoseCTNM onco:TNM_T ?ClinicalTNM_T. }.
+                       OPTIONAL { ?DiagnoseCTNM onco:TNM_c_p_u_Praefix_N ?ClinicalTNM_c_p_u_Praefix_N. }.
+                       OPTIONAL { ?DiagnoseCTNM onco:TNM_N ?ClinicalTNM_N. }.
+                       OPTIONAL { ?DiagnoseCTNM onco:TNM_c_p_u_Praefix_M ?ClinicalTNM_c_p_u_Praefix_M. }.
+                       OPTIONAL { ?DiagnoseCTNM onco:TNM_M ?ClinicalTNM_M. }.
+                       OPTIONAL { ?DiagnoseCTNM onco:TNM_L ?ClinicalTNM_L. }.
+                       OPTIONAL { ?DiagnoseCTNM onco:TNM_V ?ClinicalTNM_V. }.
+
+                       ?DiagnosePTNM rdf:type owl:NamedIndividual.
+                       ?DiagnosePTNM rdf:type onco:PathologicTNMFinding.
+                       OPTIONAL { ?DiagnosePTNM onco:TNM_Datum ?PathoTNM_Datum. }.
+                       OPTIONAL { ?DiagnosePTNM onco:TNM_Version ?PathoTNM_Version. }.
+                       OPTIONAL { ?DiagnosePTNM onco:TNM_c_p_u_Praefix_T ?PathoTNM_c_p_u_Praefix_T. }.
+                       OPTIONAL { ?DiagnosePTNM onco:TNM_T ?PathoTNM_T. }.
+                       OPTIONAL { ?DiagnosePTNM onco:TNM_c_p_u_Praefix_N ?PathoTNM_c_p_u_Praefix_N. }.
+                       OPTIONAL { ?DiagnosePTNM onco:TNM_N ?PathoTNM_N. }.
+                       OPTIONAL { ?DiagnosePTNM onco:TNM_c_p_u_Praefix_M ?PathoTNM_c_p_u_Praefix_M. }.
+                       OPTIONAL { ?DiagnosePTNM onco:TNM_M ?PathoTNM_M. }. 
+                       OPTIONAL { ?DiagnosePTNM onco:TNM_L ?PathoTNM_L. }.
+                       OPTIONAL { ?DiagnosePTNM onco:TNM_V ?PathoTNM_V. }.
+
+
+                       ?DiagnoseMenge_Fruehere_Tumorerkrankung rdf:type owl:NamedIndividual.
+                       ?DiagnoseMenge_Fruehere_Tumorerkrankung rdf:type onco:Fruehere_Tumorerkrankung.
+                       OPTIONAL { ?DiagnoseMenge_Fruehere_Tumorerkrankung onco:Freitext ?MftFreitext. }.
+                       OPTIONAL { ?DiagnoseMenge_Fruehere_Tumorerkrankung onco:ICD_Code ?MftICD_Code. }. 
+                       OPTIONAL { ?DiagnoseMenge_Fruehere_Tumorerkrankung onco:ICD_Version ?MftICD_Version. }.
+                       OPTIONAL { ?DiagnoseMenge_Fruehere_Tumorerkrankung onco:Diagnosedatum ?MftDiagnosedatum. }.
+
+
+                       ?DiagnoseMenge_Histologie rdf:type owl:NamedIndividual.
+                       ?DiagnoseMenge_Histologie rdf:type onco:HistologyResult.
+                       OPTIONAL { ?DiagnoseMenge_Histologie onco:Tumor_Histologiedatum ?DiagnoseHistTumor_Histologiedatum. }.
+                       OPTIONAL { ?DiagnoseMenge_Histologie onco:Morphologie_Code ?DiagnoseHistMorphologie_Code. }. 
+                       OPTIONAL { ?DiagnoseMenge_Histologie onco:Morphologie_ICD_O_Version ?DiagnoseHistMorphologie_ICD_O_Version. }.
+                       OPTIONAL { ?DiagnoseMenge_Histologie onco:Morphologie_Freitext ?DiagnoseHistMorphologie_Freitext. }.
+                       OPTIONAL { ?DiagnoseMenge_Histologie onco:Grading ?DiagnoseHistGrading. }.
+                       
+                       
+                       ?DiagnoseModul_Mamma rdf:type owl:NamedIndividual.
+                       ?DiagnoseModul_Mamma rdf:type onco:Modul_Mamma.
+                       OPTIONAL { ?DiagnoseModul_Mamma onco:Praetherapeutischer_Menopausenstatus ?DiagnoseMMPraetherapeutischer_Menopausenstatus. }.
+                       OPTIONAL { ?DiagnoseModul_Mamma onco:HormonrezeptorStatus_Oestrogen ?DiagnoseMMHormonrezeptorStatus_Oestrogen. }. 
+                       OPTIONAL { ?DiagnoseModul_Mamma onco:HormonrezeptorStatus_Progesteron ?DiagnoseMMHormonrezeptorStatus_Progesteron. }.
+                       OPTIONAL { ?DiagnoseModul_Mamma onco:Her2neuStatus ?DiagnoseMMHer2neuStatus. }.
+                       OPTIONAL { ?DiagnoseModul_Mamma onco:PraeopDrahtmarkierung ?DiagnoseMMPraeopDrahtmarkierung. }.                       
                        
                                         
                       }
