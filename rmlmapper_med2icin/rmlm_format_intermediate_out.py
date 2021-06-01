@@ -123,8 +123,8 @@ def process_out_file(inp_file_name):
     rep_ft_SS = ''
     rep_ft_RR = ''
     rep_ft_QQ = ''
-    PAT_ADDR_ID = str(pat_id) + '/1'
-    PAT_LABORWERT_ID = str(pat_id) + '/1'
+    PAT_ADDR_ID = str(pat_id) + '_1'
+    PAT_LABORWERT_ID = str(pat_id) + '_1'
     rep_pat_id = '+'+str(pat_id)+'+'
     rep_melder_id = 'µ'+str(melder_id)+'µ'
     rep_addr_plz = '!'+str(addr_plz)+'!'
@@ -269,7 +269,7 @@ def process_out_file(inp_file_name):
 
         PAT_MELDUNGID = str(mel_id)
         #print('PAT_MELDUNGID is: ',PAT_MELDUNGID)
-        PAT_MELDUNG_ID = str(mel_id) + '/' + str(tumor_id)
+        PAT_MELDUNG_ID = str(mel_id) + '_' + str(tumor_id)
         rep_mel_id = '*'+str(mel_id)+'*'
 
         rep_tumor_id = '~'+str(tumor_id)+'~'
@@ -302,7 +302,7 @@ def process_out_file(inp_file_name):
            tpl=tpl.replace('OPID',str(math.ceil(OPID/3)))
 
         #start of formatting for OP_OPS
-        OP_ID_OPS = str(op_id) + '/1'
+        OP_ID_OPS = str(op_id) + '_1'
         if 'OP_ID_OPS' in tpl:
            tpl = tpl.replace('OP_ID_OPS',OP_ID_OPS)
 
@@ -320,22 +320,22 @@ def process_out_file(inp_file_name):
 
         #start of formatting for Patient_ID
         if rep_pat_id in tpl:
-           tpl = tpl.replace(rep_pat_id,pat_id)
+           tpl = tpl.replace(rep_pat_id,str(pat_id))
 
         if 'PAT_ID' in tpl:
-           tpl = tpl.replace('PAT_ID',pat_id)
+           tpl = tpl.replace('PAT_ID',str(pat_id))
 
 
         #start of formatting for Patient Adress
         if rep_addr_plz in tpl:
-           tpl = tpl.replace(rep_addr_plz,PAT_ADDR_ID)
+           tpl = tpl.replace(rep_addr_plz,str(PAT_ADDR_ID))
 
         if 'PAT_ADDR_ID' in tpl:
-           tpl = tpl.replace('PAT_ADDR_ID',PAT_ADDR_ID)
+           tpl = tpl.replace('PAT_ADDR_ID',str(PAT_ADDR_ID))
 
         #start of formatting for Meldung id
         if rep_mel_id in tpl:
-           tpl = tpl.replace(rep_mel_id,mel_id)
+           tpl = tpl.replace(rep_mel_id,str(mel_id))
 
        
         '''
@@ -386,32 +386,32 @@ def process_out_file(inp_file_name):
 
 
         if 'PAT_MELDUNG_ID' in tpl:
-           tpl = tpl.replace('PAT_MELDUNG_ID',PAT_MELDUNG_ID)
+           tpl = tpl.replace('PAT_MELDUNG_ID',str(PAT_MELDUNG_ID))
 
         #start of formatting for Melder_ID
         if rep_melder_id in tpl:
-           tpl = tpl.replace(rep_melder_id,melder_id)
+           tpl = tpl.replace(rep_melder_id,str(melder_id))
 
         if 'MELDER_ID' in tpl:
-           tpl = tpl.replace('MELDER_ID',melder_id)
+           tpl = tpl.replace('MELDER_ID',str(melder_id))
 
         #start of formatting for Absender_ID
         if rep_absender_id in tpl:
-           tpl = tpl.replace(rep_absender_id,absender_id)
+           tpl = tpl.replace(rep_absender_id,str(absender_id))
 
         if 'ABSENDER_ID' in tpl:
-           tpl = tpl.replace('ABSENDER_ID',absender_id)
+           tpl = tpl.replace('ABSENDER_ID',str(absender_id))
 
         #start of formatting for MENGE_HIST_ID
         if rep_menge_hist_id in tpl:
-           tpl = tpl.replace(rep_menge_hist_id,menge_hist_id)
+           tpl = tpl.replace(rep_menge_hist_id,str(menge_hist_id))
 
         if 'MENGE_HIST_ID' in tpl:
-           tpl = tpl.replace('MENGE_HIST_ID',menge_hist_id)
+           tpl = tpl.replace('MENGE_HIST_ID',str(menge_hist_id))
 
         #start of formatting for tumor id
         if rep_tumor_id in tpl:
-           tpl = tpl.replace(rep_tumor_id,tumor_id) 
+           tpl = tpl.replace(rep_tumor_id,str(tumor_id))
   
         #start of formatting for cTNM id
         if 'CTNM_ID' in tpl:
@@ -485,15 +485,15 @@ def process_out_file(inp_file_name):
     for tpl in new_ttl_list:   
         #start of formatting for MFT_ID
         if rep_mft_id in tpl:
-           tpl = tpl.replace(rep_mft_id,mft_id)
+           tpl = tpl.replace(rep_mft_id,str(mft_id))
         if 'MFT_ID' in tpl:
-           tpl = tpl.replace('MFT_ID',mft_id)
+           tpl = tpl.replace('MFT_ID',str(mft_id))
 
         #start of formatting for Module_Mama_ID
         if rep_mod_mama_id in tpl:
-           tpl = tpl.replace(rep_mod_mama_id,mod_mama_id)
+           tpl = tpl.replace(rep_mod_mama_id,str(mod_mama_id))
         if 'MOD_MAMA_ID' in tpl:
-           tpl = tpl.replace('MOD_MAMA_ID',mod_mama_id)
+           tpl = tpl.replace('MOD_MAMA_ID',str(mod_mama_id))
 
         new_new_ttl_list.append(tpl)
     new_ttl_list = new_new_ttl_list

@@ -27,3 +27,10 @@ Rules file and python formatting script changed to correct Menge_Fruehere_Tumore
 query_patient_details_v5.txt - Menge_OP and Menge_Tumor_Konferenz of Meldung added (not working)
 
 21 May, 2021:
+
+
+query_patient_details.txt - After addition of the last two sections, i.e. Menge_OP and Menge_Tumor_Konferenz of Meldung,
+the query is not producing result. Removing these two sections from "Where" clause and from "Select" sections, brings result. 
+I believe, since once "MedicalVisit" is having many "Meldung", and Menge_OP and Menge_Tumor_Konferenz can be of any of these meldung, 
+so more than one rows with some type of join should be returned in the result which I am unable to do. Please help me in this and then
+I can further write query adding more fields and conditions.  
